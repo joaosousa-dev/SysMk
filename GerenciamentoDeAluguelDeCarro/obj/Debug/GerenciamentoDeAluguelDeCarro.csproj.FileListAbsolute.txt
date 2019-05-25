@@ -1,0 +1,30 @@
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\bin\Debug\GerenciamentoDeAluguelDeCarro.exe.config
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\bin\Debug\GerenciamentoDeAluguelDeCarro.exe
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\bin\Debug\GerenciamentoDeAluguelDeCarro.pdb
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.csprojAssemblyReference.cache
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro._4Locacao.resources
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.Properties.Resources.resources
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.csproj.GenerateResource.cache
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.exe
+C:\Users\Gabriel\source\repos\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.pdb
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\bin\Debug\GerenciamentoDeAluguelDeCarro.exe.config
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.exe
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.pdb
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\bin\Debug\GerenciamentoDeAluguelDeCarro.exe
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\bin\Debug\GerenciamentoDeAluguelDeCarro.pdb
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.csprojResolveAssemblyReference.cache
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.Properties.Resources.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.csproj.GenerateResource.Cache
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmLogin.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmMenu.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastraVeiculo.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCarros.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmLocacao.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastrarCategoria.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCategorias.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmClientes.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastrarFuncionarios.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmDevolucao.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmPagamento.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\GerenciamentoDeAluguelDeCarro\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastrarCliente.resources
