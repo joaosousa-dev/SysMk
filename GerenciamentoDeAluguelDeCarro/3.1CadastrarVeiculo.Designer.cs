@@ -99,6 +99,7 @@
             // txtPlacaCarro
             // 
             this.txtPlacaCarro.Location = new System.Drawing.Point(213, 178);
+            this.txtPlacaCarro.MaxLength = 7;
             this.txtPlacaCarro.Name = "txtPlacaCarro";
             this.txtPlacaCarro.Size = new System.Drawing.Size(178, 20);
             this.txtPlacaCarro.TabIndex = 6;
@@ -133,6 +134,7 @@
             // txtAnoCarro
             // 
             this.txtAnoCarro.Location = new System.Drawing.Point(213, 152);
+            this.txtAnoCarro.MaxLength = 4;
             this.txtAnoCarro.Name = "txtAnoCarro";
             this.txtAnoCarro.Size = new System.Drawing.Size(178, 20);
             this.txtAnoCarro.TabIndex = 22;

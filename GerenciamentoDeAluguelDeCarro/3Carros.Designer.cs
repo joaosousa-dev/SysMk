@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCarros = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrarNovoVeiculo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnAtualizarVeiculos = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarros)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -46,33 +47,34 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CARROS";
             // 
-            // dataGridView1
+            // dgvCarros
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(108, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(587, 217);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvCarros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarros.Location = new System.Drawing.Point(13, 105);
+            this.dgvCarros.Name = "dgvCarros";
+            this.dgvCarros.Size = new System.Drawing.Size(775, 217);
+            this.dgvCarros.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 86);
+            this.label2.Location = new System.Drawing.Point(12, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Veículos Cadastrados";
             // 
-            // button1
+            // btnCadastrarNovoVeiculo
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(550, 328);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Cadastrar Novo Veiculo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCadastrarNovoVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarNovoVeiculo.Location = new System.Drawing.Point(643, 328);
+            this.btnCadastrarNovoVeiculo.Name = "btnCadastrarNovoVeiculo";
+            this.btnCadastrarNovoVeiculo.Size = new System.Drawing.Size(145, 23);
+            this.btnCadastrarNovoVeiculo.TabIndex = 3;
+            this.btnCadastrarNovoVeiculo.Text = "Cadastrar Novo Veiculo";
+            this.btnCadastrarNovoVeiculo.UseVisualStyleBackColor = true;
+            this.btnCadastrarNovoVeiculo.Click += new System.EventHandler(this.btnCadastrarNovoVeiculo_Click);
             // 
             // button2
             // 
@@ -84,19 +86,31 @@
             this.button2.Text = "Voltar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // btnAtualizarVeiculos
+            // 
+            this.btnAtualizarVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarVeiculos.Location = new System.Drawing.Point(15, 328);
+            this.btnAtualizarVeiculos.Name = "btnAtualizarVeiculos";
+            this.btnAtualizarVeiculos.Size = new System.Drawing.Size(145, 23);
+            this.btnAtualizarVeiculos.TabIndex = 5;
+            this.btnAtualizarVeiculos.Text = "Atualizar";
+            this.btnAtualizarVeiculos.UseVisualStyleBackColor = true;
+            this.btnAtualizarVeiculos.Click += new System.EventHandler(this.btnAtualizarVeiculos_Click);
+            // 
             // frmCarros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAtualizarVeiculos);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCadastrarNovoVeiculo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCarros);
             this.Controls.Add(this.label1);
             this.Name = "frmCarros";
             this.Text = "Carros";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,9 +119,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCarros;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrarNovoVeiculo;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAtualizarVeiculos;
     }
 }

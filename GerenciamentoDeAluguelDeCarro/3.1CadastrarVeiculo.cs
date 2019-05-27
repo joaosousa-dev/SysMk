@@ -13,11 +13,12 @@ namespace GerenciamentoDeAluguelDeCarro
 {
     public partial class frmCadastraVeiculo : Form
     {
-        SqlConnection con = new SqlConnection("Data Source = SOUSA - PC; Initial Catalog = LocacaoDeCarro; User ID = sa; Password=joaovictor");
+        SqlConnection con = new SqlConnection("Data Source = SOUSA-PC; Initial Catalog = LocacaoDeCarro; User ID = sa; Password=joaovictor");
         SqlCommand comando = new SqlCommand();
         public frmCadastraVeiculo()
         {
             InitializeComponent();
+            comando.Connection = con;
         }
 
 
@@ -53,7 +54,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
             {
                 con.Open();
-                comando.CommandText = "INSERT INTO veiculo (marca,modelo,ano,categoria,odometro,estado,placa) VALUES ('"+txtMarcaCarro.Text+"','"+txtModeloCarro.Text+"','"+txtAnoCarro.Text+"','"+cbCategoriaCarro.Text+"','"+txtOdometroCarro.Text+"','"+cbEstadoCarro.Text+"','"+txtPlacaCarro.Text+"')";
+                comando.CommandText = "INSERT INTO veiculo (marca,modelo,ano,categoria,odometro,estado,placa) VALUES ('"+txtMarcaCarro.Text+"','"+txtModeloCarro.Text+"','"+int.Parse(txtAnoCarro.Text)+"','"+cbCategoriaCarro.Text+"','"+int.Parse(txtOdometroCarro.Text)+"','"+cbEstadoCarro.Text+"','"+txtPlacaCarro.Text+"')";
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Carro Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();

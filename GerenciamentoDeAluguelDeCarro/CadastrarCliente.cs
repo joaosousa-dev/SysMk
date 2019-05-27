@@ -46,6 +46,7 @@ namespace GerenciamentoDeAluguelDeCarro
             cbEstadoCliente.Text = "";
             cbTipoCnhCliente.Text = "";
             con.Close();
+            
         }
     }
 }

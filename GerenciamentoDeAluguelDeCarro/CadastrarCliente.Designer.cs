@@ -148,6 +148,7 @@
             // txtCepCliente
             // 
             this.txtCepCliente.Location = new System.Drawing.Point(105, 192);
+            this.txtCepCliente.MaxLength = 8;
             this.txtCepCliente.Name = "txtCepCliente";
             this.txtCepCliente.Size = new System.Drawing.Size(201, 20);
             this.txtCepCliente.TabIndex = 34;
@@ -203,7 +204,7 @@
             // txtCnhCliente
             // 
             this.txtCnhCliente.Location = new System.Drawing.Point(105, 114);
-            this.txtCnhCliente.MaxLength = 13;
+            this.txtCnhCliente.MaxLength = 11;
             this.txtCnhCliente.Name = "txtCnhCliente";
             this.txtCnhCliente.Size = new System.Drawing.Size(100, 20);
             this.txtCnhCliente.TabIndex = 28;
