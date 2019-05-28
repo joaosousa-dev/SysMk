@@ -32,7 +32,7 @@
             this.dgvCarros = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastrarNovoVeiculo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAtualizarVeiculos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarros)).BeginInit();
             this.SuspendLayout();
@@ -76,15 +76,16 @@
             this.btnCadastrarNovoVeiculo.UseVisualStyleBackColor = true;
             this.btnCadastrarNovoVeiculo.Click += new System.EventHandler(this.btnCadastrarNovoVeiculo_Click);
             // 
-            // button2
+            // btnVoltar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(13, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 29);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(13, 13);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
+            this.btnVoltar.TabIndex = 4;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnAtualizarVeiculos
             // 
@@ -103,7 +104,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAtualizarVeiculos);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrarNovoVeiculo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvCarros);
@@ -122,7 +123,7 @@
         private System.Windows.Forms.DataGridView dgvCarros;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCadastrarNovoVeiculo;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnAtualizarVeiculos;
     }
 }

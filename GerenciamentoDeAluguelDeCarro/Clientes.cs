@@ -21,6 +21,7 @@ namespace GerenciamentoDeAluguelDeCarro
         public frmClientes()
         {
             InitializeComponent();
+            comando.Connection = con;
             con.Open();
             carregarClientes(dgvClientes);
             con.Close();
@@ -55,6 +56,32 @@ namespace GerenciamentoDeAluguelDeCarro
         {
             carregarClientes(dgvClientes);
             dgvClientes.Refresh();
+            txtCod.Clear();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            
+            con.Open();
+            da = new SqlDataAdapter("SELECT * FROM cliente WHERE cod_cliente="+txtCod.Text, con);
+            dt = new DataTable();
+            da.Fill(dt);
+            dgvClientes.DataSource = dt;
+            dgvClientes.Refresh();
+            txtCod.Clear();
+            MessageBox.Show("Lista Carregada!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            con.Close();
+        }
+
     }
 }

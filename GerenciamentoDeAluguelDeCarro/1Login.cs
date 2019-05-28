@@ -19,8 +19,10 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+           
             frmMenu frm = new frmMenu();
             frm.Show();
+            
             
             
         }

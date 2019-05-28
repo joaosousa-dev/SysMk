@@ -56,9 +56,23 @@ namespace GerenciamentoDeAluguelDeCarro
                 con.Open();
                 comando.CommandText = "INSERT INTO veiculo (marca,modelo,ano,categoria,odometro,estado,placa) VALUES ('"+txtMarcaCarro.Text+"','"+txtModeloCarro.Text+"','"+int.Parse(txtAnoCarro.Text)+"','"+cbCategoriaCarro.Text+"','"+int.Parse(txtOdometroCarro.Text)+"','"+cbEstadoCarro.Text+"','"+txtPlacaCarro.Text+"')";
                 comando.ExecuteNonQuery();
+                txtAnoCarro.Clear();
+                txtMarcaCarro.Clear();
+                txtModeloCarro.Clear();
+                txtOdometroCarro.Clear();
+                txtPlacaCarro.Clear();
+                cbCategoriaCarro.Text = "";
+                cbEstadoCarro.Text = "";
                 MessageBox.Show("Carro Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                
                 con.Close();
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

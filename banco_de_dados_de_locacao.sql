@@ -10,10 +10,11 @@ nome varchar (80),
 
 create table cliente
 (
+cod_cliente int  identity(1,1)primary key,
 nome varchar (80),
 tipo_cnh char (10),
 endereço varchar (100),
-cnh varchar(11) primary key,
+cnh varchar(11),
 cep varchar (12),
 cidade varchar (40),
 estado varchar (4),

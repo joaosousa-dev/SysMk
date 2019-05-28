@@ -34,8 +34,6 @@ namespace GerenciamentoDeAluguelDeCarro
             con.Open();
             comando.CommandText = "INSERT INTO cliente (nome,cnh,tipo_cnh,endereço,cep,estado,cidade,complemento) VALUES ('" + txtNomeCliente.Text + "',+'" + txtCnhCliente.Text + "','" + cbTipoCnhCliente.Text + "','"+txtEnderecoCliente.Text+","+txtNumeroCliente.Text+"','"+txtCepCliente.Text+"','"+cbEstadoCliente.Text+"','"+txtCidadeCliente.Text+"','"+txtComplementoCliente.Text+"')";
             comando.ExecuteNonQuery();
-            
-            MessageBox.Show("Cliente Cadastrado com sucesso!", "Sucesso!",  MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtNomeCliente.Clear();
             txtEnderecoCliente.Clear();
             txtNumeroCliente.Clear();
@@ -45,8 +43,10 @@ namespace GerenciamentoDeAluguelDeCarro
             txtCnhCliente.Clear();
             cbEstadoCliente.Text = "";
             cbTipoCnhCliente.Text = "";
+            MessageBox.Show("Cliente Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             con.Close();
-            
         }
     }
 }
+
+            

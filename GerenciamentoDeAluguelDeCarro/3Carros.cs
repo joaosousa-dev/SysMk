@@ -56,5 +56,10 @@ namespace GerenciamentoDeAluguelDeCarro
             carregarCarros(dgvCarros);
             dgvCarros.Refresh();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

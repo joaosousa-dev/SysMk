@@ -33,9 +33,11 @@
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastrarNovoCliente = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAtualizarLista = new System.Windows.Forms.Button();
+            this.txtCod = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -76,25 +78,16 @@
             this.btnCadastrarNovoCliente.Text = "Cadastrar Novo Cliente";
             this.btnCadastrarNovoCliente.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnVoltar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 29);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(335, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
+            this.btnVoltar.TabIndex = 5;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnAtualizarLista
             // 
@@ -107,14 +100,44 @@
             this.btnAtualizarLista.UseVisualStyleBackColor = true;
             this.btnAtualizarLista.Click += new System.EventHandler(this.btnAtualizarLista_Click);
             // 
+            // txtCod
+            // 
+            this.txtCod.Location = new System.Drawing.Point(409, 94);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(100, 20);
+            this.txtCod.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(345, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Código";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(717, 88);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(71, 23);
+            this.btnPesquisar.TabIndex = 10;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtCod);
             this.Controls.Add(this.btnAtualizarLista);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrarNovoCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvClientes);
@@ -133,8 +156,7 @@
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCadastrarNovoCliente;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cnhDataGridViewTextBoxColumn;
@@ -145,5 +167,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn complementoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAtualizarLista;
+        private System.Windows.Forms.TextBox txtCod;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }

@@ -43,7 +43,7 @@
             this.btnCarregarFoto = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCadastrarCarro = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.rbuArCarro = new System.Windows.Forms.RadioButton();
             this.rbuDirecaoCarro = new System.Windows.Forms.RadioButton();
             this.rbuCambioCarro = new System.Windows.Forms.RadioButton();
@@ -184,14 +184,15 @@
             this.btnCadastrarCarro.UseVisualStyleBackColor = true;
             this.btnCadastrarCarro.Click += new System.EventHandler(this.btnCadastrarCarro_Click);
             // 
-            // button4
+            // btnVoltar
             // 
-            this.button4.Location = new System.Drawing.Point(12, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 28);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Voltar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(94, 28);
+            this.btnVoltar.TabIndex = 27;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // rbuArCarro
             // 
@@ -279,7 +280,7 @@
             this.Controls.Add(this.rbuCambioCarro);
             this.Controls.Add(this.rbuDirecaoCarro);
             this.Controls.Add(this.rbuArCarro);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrarCarro);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCarregarFoto);
@@ -320,7 +321,7 @@
         private System.Windows.Forms.Button btnCarregarFoto;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCadastrarCarro;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.RadioButton rbuArCarro;
         private System.Windows.Forms.RadioButton rbuDirecaoCarro;
         private System.Windows.Forms.RadioButton rbuCambioCarro;
