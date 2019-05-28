@@ -23,9 +23,11 @@ namespace GerenciamentoDeAluguelDeCarro
         public frmCarros()
         {
             InitializeComponent();
+            comando.Connection = con;
             con.Open();
             carregarCarros(dgvCarros);
             con.Close();
+            
             
             
 
@@ -61,5 +63,55 @@ namespace GerenciamentoDeAluguelDeCarro
         {
             this.Close();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtCod.Text == string.Empty)
+            {
+                MessageBox.Show("Preencha o campo Código para excluir!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                if (MessageBox.Show("Deseja excluir ?", "Confirmação ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open();
+                    comando.CommandText = "DELETE FROM veiculo WHERE cod_veiculo='" + txtCod.Text + "'";
+                    comando.ExecuteNonQuery();
+                    carregarCarros(dgvCarros);
+                    dgvCarros.Refresh();
+                    txtCod.Clear();
+                    MessageBox.Show("Veículo excluido!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    con.Close();
+                }
+            }
+        }
+
+        private void dgvCarros_SelectionChanged(object sender, EventArgs e)
+        {
+
+            txtCod.Text = dgvCarros.CurrentRow.Cells[0].Value.ToString() ;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (txtCod.Text != string.Empty)
+            {
+
+                con.Open();
+                da = new SqlDataAdapter("SELECT * FROM veiculo WHERE cod_veiculo=" + txtCod.Text, con);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvCarros.DataSource = dt;
+                dgvCarros.Refresh();
+                txtCod.Clear();
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Preencha o código do veículo!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        
     }
 }
