@@ -31,13 +31,14 @@ senha varchar (40)
 create table veiculo
 (
 cod_veiculo int identity(1,1) primary key,
+placa varchar (10),
 marca varchar (30),
 modelo varchar (30),
 ano int ,
+situacao varchar(15),
 categoria varchar (30),
 odometro int ,
-estado varchar (40),
-placa varchar (10)
+estado varchar (40)
 )
 
 create table valores
@@ -54,4 +55,4 @@ select * from cliente
 select * from veiculo
 select * from funcionario
 
-drop table cliente
+drop table veiculo

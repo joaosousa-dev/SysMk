@@ -51,6 +51,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtOdometroCarro = new System.Windows.Forms.TextBox();
+            this.cbSituacao = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +119,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(158, 225);
+            this.label5.Location = new System.Drawing.Point(158, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 7;
@@ -197,7 +199,7 @@
             // rbuArCarro
             // 
             this.rbuArCarro.AutoSize = true;
-            this.rbuArCarro.Location = new System.Drawing.Point(173, 312);
+            this.rbuArCarro.Location = new System.Drawing.Point(173, 333);
             this.rbuArCarro.Name = "rbuArCarro";
             this.rbuArCarro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rbuArCarro.Size = new System.Drawing.Size(103, 17);
@@ -209,7 +211,7 @@
             // rbuDirecaoCarro
             // 
             this.rbuDirecaoCarro.AutoSize = true;
-            this.rbuDirecaoCarro.Location = new System.Drawing.Point(173, 335);
+            this.rbuDirecaoCarro.Location = new System.Drawing.Point(173, 356);
             this.rbuDirecaoCarro.Name = "rbuDirecaoCarro";
             this.rbuDirecaoCarro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rbuDirecaoCarro.Size = new System.Drawing.Size(149, 17);
@@ -221,7 +223,7 @@
             // rbuCambioCarro
             // 
             this.rbuCambioCarro.AutoSize = true;
-            this.rbuCambioCarro.Location = new System.Drawing.Point(173, 289);
+            this.rbuCambioCarro.Location = new System.Drawing.Point(173, 310);
             this.rbuCambioCarro.Name = "rbuCambioCarro";
             this.rbuCambioCarro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rbuCambioCarro.Size = new System.Drawing.Size(116, 17);
@@ -268,11 +270,34 @@
             this.txtOdometroCarro.Size = new System.Drawing.Size(178, 20);
             this.txtOdometroCarro.TabIndex = 35;
             // 
+            // cbSituacao
+            // 
+            this.cbSituacao.FormattingEnabled = true;
+            this.cbSituacao.Items.AddRange(new object[] {
+            "Disponivel",
+            "Indisponivel",
+            "Alugado"});
+            this.cbSituacao.Location = new System.Drawing.Point(213, 281);
+            this.cbSituacao.Name = "cbSituacao";
+            this.cbSituacao.Size = new System.Drawing.Size(178, 21);
+            this.cbSituacao.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(158, 284);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Situacão";
+            // 
             // frmCadastraVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cbSituacao);
             this.Controls.Add(this.txtOdometroCarro);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -329,5 +354,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtOdometroCarro;
+        private System.Windows.Forms.ComboBox cbSituacao;
+        private System.Windows.Forms.Label label8;
     }
 }

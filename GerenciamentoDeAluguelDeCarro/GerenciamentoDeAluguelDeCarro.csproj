@@ -119,6 +119,11 @@
     <Compile Include="frmPagamento.Designer.cs">
       <DependentUpon>frmPagamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocacaoDeCarroDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocacaoDeCarroDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="1Login.resx">
@@ -167,7 +172,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="LocacaoDeCarroDataSet.xsc">
+      <DependentUpon>LocacaoDeCarroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LocacaoDeCarroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocacaoDeCarroDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LocacaoDeCarroDataSet.xss">
+      <DependentUpon>LocacaoDeCarroDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

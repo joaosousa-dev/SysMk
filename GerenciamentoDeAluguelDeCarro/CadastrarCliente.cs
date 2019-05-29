@@ -31,6 +31,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (txtCepCliente.Text == string.Empty || txtCidadeCliente.Text==string.Empty || txtCnhCliente.Text==string.Empty || txtComplementoCliente.Text==string.Empty || txtEnderecoCliente.Text==string.Empty || txtNomeCliente.Text == string.Empty || txtNumeroCliente.Text==string.Empty || cbEstadoCliente.Text == string.Empty || cbTipoCnhCliente.Text == string.Empty)
             con.Open();
             comando.CommandText = "INSERT INTO cliente (nome,cnh,tipo_cnh,endereço,cep,estado,cidade,complemento) VALUES ('" + txtNomeCliente.Text + "',+'" + txtCnhCliente.Text + "','" + cbTipoCnhCliente.Text + "','"+txtEnderecoCliente.Text+","+txtNumeroCliente.Text+"','"+txtCepCliente.Text+"','"+cbEstadoCliente.Text+"','"+txtCidadeCliente.Text+"','"+txtComplementoCliente.Text+"')";
             comando.ExecuteNonQuery();

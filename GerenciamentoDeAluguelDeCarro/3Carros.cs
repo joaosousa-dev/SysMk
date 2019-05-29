@@ -55,8 +55,10 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnAtualizarVeiculos_Click(object sender, EventArgs e)
         {
+            con.Open();
             carregarCarros(dgvCarros);
             dgvCarros.Refresh();
+            con.Close();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
