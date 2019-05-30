@@ -114,7 +114,6 @@
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Placa:";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // label5
             // 
@@ -321,8 +320,10 @@
             this.Controls.Add(this.txtMarcaCarro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCadastraVeiculo";
             this.Text = "Cadastro de veiculo";
+            this.Load += new System.EventHandler(this.frmCadastraVeiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -20,29 +20,6 @@ namespace GerenciamentoDeAluguelDeCarro
             InitializeComponent();
             comando.Connection = con;
         }
-
-
-
-        private void Label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CheckBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCadastrarCarro_Click(object sender, EventArgs e)
         {
             if (txtAnoCarro.Text == String.Empty || txtMarcaCarro.Text == String.Empty || txtModeloCarro.Text == String.Empty || txtPlacaCarro.Text == String.Empty || cbCategoriaCarro.Text == String.Empty)
@@ -64,8 +41,6 @@ namespace GerenciamentoDeAluguelDeCarro
                 cbCategoriaCarro.Text = "";
                 cbEstadoCarro.Text = "";
                 MessageBox.Show("Carro Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                
                 con.Close();
             }
         }
@@ -73,6 +48,33 @@ namespace GerenciamentoDeAluguelDeCarro
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void carregarcb()
+        {
+            con.Open();
+            try
+            {
+                SqlDataReader dr;
+                comando.CommandText = "SELECT nome FROM categoria";
+                dr = comando.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                cbCategoriaCarro.DisplayMember = "nome";
+                cbCategoriaCarro.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void frmCadastraVeiculo_Load(object sender, EventArgs e)
+        {
+            carregarcb();
         }
     }
 }

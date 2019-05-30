@@ -89,12 +89,6 @@
     <Compile Include="CadastrarCliente.Designer.cs">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Categorias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Categorias.Designer.cs">
-      <DependentUpon>Categorias.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Categorias.resx">
-      <DependentUpon>Categorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>

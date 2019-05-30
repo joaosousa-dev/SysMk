@@ -157,6 +157,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvCarros);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCarros";
             this.Text = "Carros";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarros)).EndInit();

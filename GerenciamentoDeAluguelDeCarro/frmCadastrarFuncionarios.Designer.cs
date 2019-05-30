@@ -81,6 +81,7 @@
             this.Controls.Add(this.dgvFuncionarios);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCadastrarFuncionarios";
             this.Text = "Cadastrar Funcionarios";
             this.Load += new System.EventHandler(this.frmCadastrarFuncionarios_Load);

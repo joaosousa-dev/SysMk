@@ -142,6 +142,7 @@
             this.Controls.Add(this.btnCadastrarNovoCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvClientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmClientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);

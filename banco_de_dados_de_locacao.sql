@@ -26,8 +26,9 @@ create table logins
 usuario varchar (30) primary key ,
 senha varchar (40)
 )
-insert into logins values ('joao','123');
+
 select * from logins
+insert into logins Values('admin','admin')
 
 
 create table veiculo
@@ -40,9 +41,19 @@ ano int ,
 situacao varchar(15),
 categoria varchar (30),
 odometro int ,
-estado varchar (40)
+estado varchar (40),
+cod_categoria int,
+foreign key (cod_categoria) references categoria (cod_categoria)
 )
 
+create table categoria
+(
+cod_categoria int primary key identity(1,1),
+nome varchar(20),
+preco float (10)
+)
+drop table categoria
+drop table veiculo
 create table valores
 (
 tx_veiculo float ,

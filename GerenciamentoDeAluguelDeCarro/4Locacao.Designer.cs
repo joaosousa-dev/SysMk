@@ -618,6 +618,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmLocacao";
             this.Text = "Locação";
             this.Load += new System.EventHandler(this._4Locacao_Load);

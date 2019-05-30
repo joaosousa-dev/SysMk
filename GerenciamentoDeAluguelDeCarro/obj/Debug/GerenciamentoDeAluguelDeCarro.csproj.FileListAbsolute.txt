@@ -41,7 +41,6 @@ D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAlugue
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmLocacao.resources
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastrarCategoria.resources
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastrarCliente.resources
-D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCategorias.resources
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmClientes.resources
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmDevolucao.resources
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastrarFuncionarios.resources

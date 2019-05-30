@@ -15,8 +15,7 @@ namespace GerenciamentoDeAluguelDeCarro.Repositorio
         {
             con.ConnectionString = @"Data Source = SOUSA-PC; Initial Catalog = LocacaoDeCarro; User ID = sa; Password = joaovictor";
 
-            //"User ID = sa; Initial Catalog = SYSLOGIN; Data Source =(local); Password = 1234567"
-            //Data Source = wellnote; Initial Catalog = SYSLOGIN; Integrated Security = True
+           
         }
 
         public SqlConnection Conectar()

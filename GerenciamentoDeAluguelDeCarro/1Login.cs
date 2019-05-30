@@ -21,6 +21,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            
             controle controle = new controle();
             controle.acessar(txtUsuario.Text, txtSenha.Text);
             if (controle.mensagem.Equals(""))
@@ -28,8 +29,10 @@ namespace GerenciamentoDeAluguelDeCarro
                 {
                     MessageBox.Show("Logado com sucesso", "entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    frmMenu frm = new frmMenu();
+                    frmMenu frm = new frmMenu(txtUsuario.Text);
                     frm.Show();
+                    txtUsuario.Clear();
+                    txtSenha.Clear(); 
                 }
                 else
                 {
@@ -41,6 +44,19 @@ namespace GerenciamentoDeAluguelDeCarro
             }
 
 
+        }
+
+        private void cbxMostraSenha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxMostraSenha.Checked)
+                txtSenha.UseSystemPasswordChar = false;
+            else
+                txtSenha.UseSystemPasswordChar = true;
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            txtSenha.UseSystemPasswordChar = true;
         }
     }
 }

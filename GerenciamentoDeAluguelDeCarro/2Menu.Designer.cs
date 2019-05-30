@@ -36,7 +36,7 @@
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnPagamento = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,27 +134,29 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(591, 27);
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.lblUsuario);
+            this.groupBox1.Location = new System.Drawing.Point(648, -1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(209, 44);
+            this.groupBox1.Size = new System.Drawing.Size(152, 54);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Usuário";
+            this.groupBox1.Text = "Usuário Atual";
             // 
-            // label2
+            // lblUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(51, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Usuário Atual";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.Blue;
+            this.lblUsuario.Location = new System.Drawing.Point(47, 21);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(63, 20);
+            this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.Text = "---------";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aToolStripMenuItem,
             this.bToolStripMenuItem,
@@ -181,28 +183,28 @@
             // veículosToolStripMenuItem
             // 
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
-            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.veículosToolStripMenuItem.Text = "Veículos";
             this.veículosToolStripMenuItem.Click += new System.EventHandler(this.veículosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // carrosToolStripMenuItem1
             // 
             this.carrosToolStripMenuItem1.Name = "carrosToolStripMenuItem1";
-            this.carrosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.carrosToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.carrosToolStripMenuItem1.Text = "Funcionários";
             this.carrosToolStripMenuItem1.Click += new System.EventHandler(this.carrosToolStripMenuItem1_Click);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.categoriaToolStripMenuItem.Text = "Categorias";
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
@@ -220,28 +222,28 @@
             // carrosToolStripMenuItem
             // 
             this.carrosToolStripMenuItem.Name = "carrosToolStripMenuItem";
-            this.carrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.carrosToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.carrosToolStripMenuItem.Text = "Veículos";
             this.carrosToolStripMenuItem.Click += new System.EventHandler(this.carrosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
@@ -256,6 +258,7 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -279,6 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCategoriasDeVeiculos);
             this.Controls.Add(this.groupBox1);
@@ -290,7 +294,7 @@
             this.Controls.Add(this.btnVeiculos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
             this.Text = "Gerenciamento de aluguel de Veículos";
@@ -313,7 +317,7 @@
         private System.Windows.Forms.Button btnFuncionarios;
         private System.Windows.Forms.Button btnPagamento;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;

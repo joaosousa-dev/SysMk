@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace GerenciamentoDeAluguelDeCarro
 {
     public partial class frmMenu : Form
     {
-        public frmMenu()
+        public frmMenu(string usuario)
         {
             InitializeComponent();
+            CarregaLabel();
+            lblUsuario.Text = usuario;
+           
         }
 
         private void btnVeiculos_Click(object sender, EventArgs e)
@@ -43,7 +47,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnCategoriasDeVeiculos_Click(object sender, EventArgs e)
         {
-            frmCategorias frm = new frmCategorias();
+            frmCadastrarCategoria frm = new frmCadastrarCategoria();
             frm.Show();
         }
 
@@ -61,7 +65,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(" SysMk ltda \n Version - 1.0 alpha \n ® all rights reserved","About" ,MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show(" SysMk ltda \n Version - 1.0 alpha \n ® all rights reserved", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void veículosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,8 +112,27 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCategorias frm = new frmCategorias();
+            frmCadastrarCategoria frm = new frmCadastrarCategoria();
             frm.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void CarregaLabel()
+        {
+            SqlConnection con = new SqlConnection("Data Source=SOUSA-PC;Initial Catalog=LocacaoDeCarro;User ID=sa; Password=joaovictor");
+            SqlCommand comando = new SqlCommand("SELECT * FROM logins",con);
+            comando.Connection = con;
+            con.Open();
+            SqlDataReader dr = comando.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            lblUsuario.Text = dt.Rows[0].ToString();
+            con.Close();
+           
         }
     }
 }
+

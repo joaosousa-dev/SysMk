@@ -43,7 +43,7 @@ namespace GerenciamentoDeAluguelDeCarro
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Erro!" + ex.ToString());
+                MessageBox.Show(ex.Message,"erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
