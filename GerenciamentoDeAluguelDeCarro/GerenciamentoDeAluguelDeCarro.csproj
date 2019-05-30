@@ -101,6 +101,8 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositorio\conexao.cs" />
+    <Compile Include="Model\controle.cs" />
     <Compile Include="Devolucao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +126,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LocacaoDeCarroDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Repositorio\LoginComandos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="1Login.resx">
@@ -196,5 +199,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

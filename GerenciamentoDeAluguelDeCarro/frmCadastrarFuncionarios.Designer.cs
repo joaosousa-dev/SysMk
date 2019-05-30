@@ -56,10 +56,10 @@
             this.dgvFuncionarios.AllowUserToAddRows = false;
             this.dgvFuncionarios.AllowUserToDeleteRows = false;
             this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncionarios.Location = new System.Drawing.Point(12, 154);
+            this.dgvFuncionarios.Location = new System.Drawing.Point(190, 154);
             this.dgvFuncionarios.Name = "dgvFuncionarios";
             this.dgvFuncionarios.ReadOnly = true;
-            this.dgvFuncionarios.Size = new System.Drawing.Size(660, 209);
+            this.dgvFuncionarios.Size = new System.Drawing.Size(314, 209);
             this.dgvFuncionarios.TabIndex = 19;
             // 
             // btnCadastrar

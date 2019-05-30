@@ -53,6 +53,7 @@
             this.dgvClientes.Size = new System.Drawing.Size(776, 217);
             this.dgvClientes.TabIndex = 2;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
             // clienteBindingSource
             // 

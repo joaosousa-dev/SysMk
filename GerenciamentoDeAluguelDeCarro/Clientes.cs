@@ -90,5 +90,9 @@ namespace GerenciamentoDeAluguelDeCarro
             }
         }
 
+        private void dgvClientes_SelectionChanged(object sender, EventArgs e)
+        {
+            txtCod.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+        }
     }
 }

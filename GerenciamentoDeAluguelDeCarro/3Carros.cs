@@ -96,6 +96,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+
             if (txtCod.Text != string.Empty)
             {
 
@@ -106,6 +107,7 @@ namespace GerenciamentoDeAluguelDeCarro
                 dgvCarros.DataSource = dt;
                 dgvCarros.Refresh();
                 txtCod.Clear();
+                MessageBox.Show("Lista Carregada!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
             }
             else

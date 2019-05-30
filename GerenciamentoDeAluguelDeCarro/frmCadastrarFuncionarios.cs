@@ -34,14 +34,21 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            con.Open();
-            comando.CommandText = "INSERT INTO funcionario (nome) VALUES ('"+txtNome.Text+"')";
-            comando.ExecuteNonQuery();
-            txtNome.Clear();
-            carregarFuncionarios(dgvFuncionarios);
-            dgvFuncionarios.Refresh();
-            MessageBox.Show("Funcionário Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            con.Close();
+            if (txtNome.Text != string.Empty)
+            {
+                con.Open();
+                comando.CommandText = "INSERT INTO funcionario (nome) VALUES ('" + txtNome.Text + "')";
+                comando.ExecuteNonQuery();
+                txtNome.Clear();
+                carregarFuncionarios(dgvFuncionarios);
+                dgvFuncionarios.Refresh();
+                MessageBox.Show("Funcionário Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con.Close();
+            }else
+            {
+                MessageBox.Show("Preencha campos vazios", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
         public void carregarFuncionarios (DataGridView dgv)
         {

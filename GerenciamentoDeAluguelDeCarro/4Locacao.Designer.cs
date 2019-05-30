@@ -82,6 +82,7 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -548,11 +549,21 @@
             this.label28.TabIndex = 105;
             this.label28.Text = "Dia da devolução";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(489, 296);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(49, 13);
+            this.label29.TabIndex = 107;
+            this.label29.Text = "Situação";
+            // 
             // frmLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label29);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.comboBox5);
@@ -671,5 +682,6 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
     }
 }

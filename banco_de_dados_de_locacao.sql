@@ -21,12 +21,14 @@ estado varchar (4),
 complemento varchar (100)
 )
 
-create table acesso 
+create table logins
 (
-cod_usuario int identity(1,1) primary key,
-nome varchar (30),
+usuario varchar (30) primary key ,
 senha varchar (40)
 )
+insert into logins values ('joao','123');
+select * from logins
+
 
 create table veiculo
 (
