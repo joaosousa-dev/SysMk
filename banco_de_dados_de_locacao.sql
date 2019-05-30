@@ -12,6 +12,7 @@ create table cliente
 (
 cod_cliente int  identity(1,1)primary key,
 nome varchar (80),
+telefone varchar(15),
 tipo_cnh char (10),
 endereço varchar (100),
 cnh varchar(11),
@@ -46,24 +47,34 @@ cod_categoria int,
 foreign key (cod_categoria) references categoria (cod_categoria)
 )
 
+create table locacao
+(
+cod_locacao int identity(1,1)primary key,
+cod_cliente int,
+cod_veiculo int,
+cod_fun int,
+data_aluguel datetime,
+data_devolucao datetime,
+hora_aluguel time,
+foreign key(cod_cliente)references cliente (cod_cliente),
+foreign key (cod_veiculo) references veiculo (cod_veiculo),
+foreign key (cod_fun) references funcionario (cod_fun)
+)
+
 create table categoria
 (
 cod_categoria int primary key identity(1,1),
 nome varchar(20),
 preco float (10)
 )
-drop table categoria
-drop table veiculo
-create table valores
+
+create table contrato
 (
-tx_veiculo float ,
-imp_veiculo float ,
-val_add float ,
-total float
+cod_contrato int primary key identity(1,1),
 )
 
-select * from valores
-select * from acesso
+
+
 select * from cliente
 select * from veiculo
 select * from funcionario

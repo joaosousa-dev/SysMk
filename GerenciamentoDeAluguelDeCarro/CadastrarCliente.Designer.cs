@@ -36,7 +36,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtNumeroCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtCepCliente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtEnderecoCliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,6 +48,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientesCadastradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCepCliente = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,14 +147,6 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "N°:";
             // 
-            // txtCepCliente
-            // 
-            this.txtCepCliente.Location = new System.Drawing.Point(105, 192);
-            this.txtCepCliente.MaxLength = 8;
-            this.txtCepCliente.Name = "txtCepCliente";
-            this.txtCepCliente.Size = new System.Drawing.Size(201, 20);
-            this.txtCepCliente.TabIndex = 34;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -220,7 +214,7 @@
             // 
             // txtNomeCliente
             // 
-            this.txtNomeCliente.Location = new System.Drawing.Point(105, 88);
+            this.txtNomeCliente.Location = new System.Drawing.Point(105, 62);
             this.txtNomeCliente.Name = "txtNomeCliente";
             this.txtNomeCliente.Size = new System.Drawing.Size(201, 20);
             this.txtNomeCliente.TabIndex = 26;
@@ -228,7 +222,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 91);
+            this.label2.Location = new System.Drawing.Point(61, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 25;
@@ -261,11 +255,39 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // txtTelefoneCliente
+            // 
+            this.txtTelefoneCliente.Location = new System.Drawing.Point(105, 88);
+            this.txtTelefoneCliente.Mask = "(99)9999-9999";
+            this.txtTelefoneCliente.Name = "txtTelefoneCliente";
+            this.txtTelefoneCliente.Size = new System.Drawing.Size(201, 20);
+            this.txtTelefoneCliente.TabIndex = 47;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Telefone:";
+            // 
+            // txtCepCliente
+            // 
+            this.txtCepCliente.Location = new System.Drawing.Point(105, 192);
+            this.txtCepCliente.Mask = "99999-999";
+            this.txtCepCliente.Name = "txtCepCliente";
+            this.txtCepCliente.Size = new System.Drawing.Size(201, 20);
+            this.txtCepCliente.TabIndex = 49;
+            // 
             // frmCadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 320);
+            this.Controls.Add(this.txtCepCliente);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtTelefoneCliente);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.cbEstadoCliente);
             this.Controls.Add(this.label14);
@@ -275,7 +297,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtNumeroCliente);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtCepCliente);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtEnderecoCliente);
             this.Controls.Add(this.label5);
@@ -307,7 +328,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtNumeroCliente;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtCepCliente;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtEnderecoCliente;
         private System.Windows.Forms.Label label5;
@@ -320,5 +340,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clientesCadastradosToolStripMenuItem;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.MaskedTextBox txtTelefoneCliente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txtCepCliente;
     }
 }
