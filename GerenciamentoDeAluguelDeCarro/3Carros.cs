@@ -49,6 +49,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnCadastrarNovoVeiculo_Click(object sender, EventArgs e)
         {
+            this.Close();
             frmCadastraVeiculo frm = new frmCadastraVeiculo();
             frm.Show();
         }

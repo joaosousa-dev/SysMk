@@ -39,6 +39,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnGerarContrato_Click(object sender, EventArgs e)
         {
+             
             Document doc = new Document(PageSize.A4);
             doc.SetMargins(40, 40, 40, 80);
             doc.AddCreationDate();//adicionando as configuracoes
@@ -47,7 +48,7 @@ namespace GerenciamentoDeAluguelDeCarro
          try
             {
                 doc.Open();
-                Paragraph paragrafo = new Paragraph("Código Do cliente :"+txtCodCliente.Text+"\n"+"Nome do cliente: "+txtNomeCliente.Text);
+                Paragraph paragrafo = new Paragraph("    Eu, "+txtNomeCliente.Text+", Cnh: "+txtCnhCliente.Text+ ",Inscrito no CPF: ___.___.___-__ E RG______________ residente e domiciliado(a) à "+txtEnderecoCliente.Text+", na cidade de "+txtCidadeCliente.Text+" - "+cbEstadoCliente.Text+ ",por meio deste instrumento declaro me responsabilizar pela conservação de um Veiculo "+txtModeloVeiculo.Text+ ".\n    Me comprometo a devolver o mencionado bem em perfeito estado de conservação, como atualmente se encontra, ao fim do prazo estabelecido.\n    Em caso de extravio ou danos que provoquem a perda total ou parcial do bem, fico obrigado a ressarcir o proprietário dos prejuízos ocasionados.\n\n\n"+dtpLocacao.Text+"\n\nAssinatura:\n_____________________________________\n\n\n\nAtesto que o bem foi devolvido em "+dtpDevolucao.Text+", Nas seguintes condições: \n\n(_)Perfeito Estado\n(_)Com Defeitos\n(_)Faltando peças /acessórios\n");
                 doc.Add(paragrafo);
                 MessageBox.Show("Contrato Gerado Com sucesso!","Contrato",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 doc.Close();

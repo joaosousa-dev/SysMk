@@ -94,5 +94,12 @@ namespace GerenciamentoDeAluguelDeCarro
         {
             txtCod.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
         }
+
+        private void btnCadastrarNovoCliente_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmCadastrarCliente frm = new frmCadastrarCliente();
+            frm.Show();
+        }
     }
 }

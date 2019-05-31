@@ -13,6 +13,7 @@ namespace GerenciamentoDeAluguelDeCarro
 {
     public partial class frmMenu : Form
     {
+        DateTime data_hora;
         public frmMenu(string usuario)
         {
             InitializeComponent();
@@ -132,6 +133,12 @@ namespace GerenciamentoDeAluguelDeCarro
             lblUsuario.Text = dt.Rows[0].ToString();
             con.Close();
            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            data_hora = DateTime.Now;
+            lblDataHora.Text = " " + data_hora.ToLongDateString() + "   " + data_hora.ToLongTimeString();
         }
     }
 }

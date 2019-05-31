@@ -27,8 +27,7 @@ namespace GerenciamentoDeAluguelDeCarro
             if (controle.mensagem.Equals(""))
                 if (controle.T)
                 {
-                    MessageBox.Show("Logado com sucesso", "entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("Acesso Permitido", "Entrando...", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmMenu frm = new frmMenu(txtUsuario.Text);
                     frm.Show();
                     txtUsuario.Clear();
@@ -36,7 +35,7 @@ namespace GerenciamentoDeAluguelDeCarro
                 }
                 else
                 {
-                    MessageBox.Show("usúario/senha invalídos", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("usúario ou senha invalídos,Tente novamente!", "ATENÇÃO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             else
             {
@@ -57,6 +56,11 @@ namespace GerenciamentoDeAluguelDeCarro
         private void frmLogin_Load(object sender, EventArgs e)
         {
             txtSenha.UseSystemPasswordChar = true;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
