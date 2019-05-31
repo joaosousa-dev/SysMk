@@ -24,12 +24,13 @@ complemento varchar (100)
 
 create table logins
 (
-usuario varchar (30) primary key ,
-senha varchar (40)
+usuario varchar (20) primary key ,
+senha varchar (100)
 )
 
 select * from logins
 insert into logins Values('admin','admin')
+
 
 
 create table veiculo

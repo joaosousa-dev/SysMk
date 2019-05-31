@@ -83,6 +83,16 @@ namespace GerenciamentoDeAluguelDeCarro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar {
+            get {
+                object obj = ResourceManager.GetObject("calendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap car_13260 {
             get {
                 object obj = ResourceManager.GetObject("car_13260", resourceCulture);
@@ -123,6 +133,16 @@ namespace GerenciamentoDeAluguelDeCarro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clock {
+            get {
+                object obj = ResourceManager.GetObject("clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dollar_bills {
             get {
                 object obj = ResourceManager.GetObject("dollar-bills", resourceCulture);
@@ -146,6 +166,16 @@ namespace GerenciamentoDeAluguelDeCarro.Properties {
         internal static System.Drawing.Bitmap group__2_ {
             get {
                 object obj = ResourceManager.GetObject("group (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_arrow {
+            get {
+                object obj = ResourceManager.GetObject("left-arrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

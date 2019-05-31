@@ -51,6 +51,7 @@
             this.txtTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCepCliente = new System.Windows.Forms.MaskedTextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -241,7 +242,7 @@
             // clientesCadastradosToolStripMenuItem
             // 
             this.clientesCadastradosToolStripMenuItem.Name = "clientesCadastradosToolStripMenuItem";
-            this.clientesCadastradosToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+            this.clientesCadastradosToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.clientesCadastradosToolStripMenuItem.Text = "Clientes Cadastrados";
             this.clientesCadastradosToolStripMenuItem.Click += new System.EventHandler(this.clientesCadastradosToolStripMenuItem_Click);
             // 
@@ -280,11 +281,23 @@
             this.txtCepCliente.Size = new System.Drawing.Size(201, 20);
             this.txtCepCliente.TabIndex = 49;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 27);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
+            this.btnVoltar.TabIndex = 50;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmCadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 320);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtCepCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTelefoneCliente);
@@ -310,6 +323,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmCadastrarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Cliente";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -343,5 +357,6 @@
         private System.Windows.Forms.MaskedTextBox txtTelefoneCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtCepCliente;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

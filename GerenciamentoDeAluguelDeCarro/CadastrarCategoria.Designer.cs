@@ -36,6 +36,7 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPreco = new System.Windows.Forms.TextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +114,23 @@
             this.txtPreco.Size = new System.Drawing.Size(65, 20);
             this.txtPreco.TabIndex = 34;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
+            this.btnVoltar.TabIndex = 35;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmCadastrarCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 345);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnExcluir);
@@ -128,6 +141,7 @@
             this.Controls.Add(this.btnCadastrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCadastrarCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Categoria";
             this.Load += new System.EventHandler(this.frmCadastrarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
@@ -146,5 +160,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

@@ -39,11 +39,9 @@
             this.cbCategoriaCarro = new System.Windows.Forms.ComboBox();
             this.txtAnoCarro = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCarregarFoto = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCadastrarCarro = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.rbuArCarro = new System.Windows.Forms.RadioButton();
             this.rbuDirecaoCarro = new System.Windows.Forms.RadioButton();
             this.rbuCambioCarro = new System.Windows.Forms.RadioButton();
@@ -53,6 +51,8 @@
             this.txtOdometroCarro = new System.Windows.Forms.TextBox();
             this.cbSituacao = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,14 +149,6 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Ano:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(445, 100);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 193);
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnCarregarFoto
             // 
             this.btnCarregarFoto.Location = new System.Drawing.Point(584, 299);
@@ -184,16 +176,6 @@
             this.btnCadastrarCarro.Text = "Cadastrar";
             this.btnCadastrarCarro.UseVisualStyleBackColor = true;
             this.btnCadastrarCarro.Click += new System.EventHandler(this.btnCadastrarCarro_Click);
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(94, 28);
-            this.btnVoltar.TabIndex = 27;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // rbuArCarro
             // 
@@ -290,6 +272,25 @@
             this.label8.TabIndex = 37;
             this.label8.Text = "Situacão";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(94, 28);
+            this.btnVoltar.TabIndex = 27;
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(445, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 193);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmCadastraVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,6 +323,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCadastraVeiculo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de veiculo";
             this.Load += new System.EventHandler(this.frmCadastraVeiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -137,8 +137,24 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            data_hora = DateTime.Now;
-            lblDataHora.Text = " " + data_hora.ToLongDateString() + "   " + data_hora.ToLongTimeString();
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            lblData.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lblUsuario.Text == "admin")
+            {
+                frmCadastrarUsuario frm = new frmCadastrarUsuario();
+                frm.Show();
+            }
+            else
+                MessageBox.Show("O usuário '"+lblUsuario.Text+"' não tem permissão para isso!", "erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

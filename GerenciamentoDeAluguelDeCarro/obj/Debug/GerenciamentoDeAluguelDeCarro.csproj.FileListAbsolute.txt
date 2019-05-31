@@ -49,3 +49,4 @@ D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAlugue
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.csproj.GenerateResource.Cache
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\bin\Debug\itextsharp.dll
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\bin\Debug\itextsharp.xml
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastrarUsuario.resources

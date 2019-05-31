@@ -99,6 +99,12 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarUsuario.Designer.cs">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositorio\conexao.cs" />
     <Compile Include="Model\controle.cs" />
     <Compile Include="Devolucao.cs">
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastrarFuncionarios.resx">
       <DependentUpon>frmCadastrarFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarUsuario.resx">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPagamento.resx">
       <DependentUpon>frmPagamento.cs</DependentUpon>
@@ -251,6 +260,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Misc_icon_User_Card_1942.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -79,11 +79,11 @@
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
             this.btnVoltar.Location = new System.Drawing.Point(12, 12);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(81, 29);
             this.btnVoltar.TabIndex = 5;
-            this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
@@ -145,6 +145,7 @@
             this.Controls.Add(this.dgvClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();

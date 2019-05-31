@@ -22,5 +22,10 @@ namespace GerenciamentoDeAluguelDeCarro
             frmPagamento frm = new frmPagamento();
             frm.Show();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

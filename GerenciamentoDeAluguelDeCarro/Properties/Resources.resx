@@ -121,14 +121,14 @@
   <data name="admin-with-cogwheels" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin-with-cogwheels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="car_13260(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\car_13260(1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="sports-car" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sports-car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rent-a-car" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rent-a-car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Misc_icon_User_Card_1942.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Misc_icon_User_Card_1942.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1918.png_860" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1918.png_860.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,14 +136,23 @@
   <data name="car_13260" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car_13260.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="password (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="User 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,31 +169,31 @@
   <data name="car_13260(1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car_13260(1).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="category" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\category.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dollar-bills" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dollar-bills.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="users" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rent-a-car" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rent-a-car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="users1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\users1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="users" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dollar-bills" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dollar-bills.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mail_reply_arrow-green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mail_reply_arrow-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="group (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\group (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Misc_icon_User_Card_1942.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Misc_icon_User_Card_1942.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="car_13260(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\car_13260(1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="left-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

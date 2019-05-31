@@ -83,6 +83,7 @@
             this.txtEnderecoCliente = new System.Windows.Forms.TextBox();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -558,11 +559,23 @@
             this.label30.TabIndex = 108;
             this.label30.Text = "Nome:";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
+            this.btnVoltar.Location = new System.Drawing.Point(10, 6);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
+            this.btnVoltar.TabIndex = 110;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtNomeCliente);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
@@ -620,6 +633,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmLocacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locação";
             this.Load += new System.EventHandler(this._4Locacao_Load);
             this.ResumeLayout(false);
@@ -684,5 +698,6 @@
         private System.Windows.Forms.TextBox txtEnderecoCliente;
         private System.Windows.Forms.TextBox txtNomeCliente;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
