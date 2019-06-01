@@ -57,6 +57,7 @@
             // 
             // cbEstadoCliente
             // 
+            this.cbEstadoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstadoCliente.FormattingEnabled = true;
             this.cbEstadoCliente.Items.AddRange(new object[] {
             "AC",
@@ -184,6 +185,8 @@
             // 
             // cbTipoCnhCliente
             // 
+            this.cbTipoCnhCliente.AccessibleDescription = "";
+            this.cbTipoCnhCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoCnhCliente.FormattingEnabled = true;
             this.cbTipoCnhCliente.Items.AddRange(new object[] {
             "A",

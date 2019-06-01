@@ -91,9 +91,15 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void dgvCarros_SelectionChanged(object sender, EventArgs e)
         {
-
-            txtCod.Text = dgvCarros.CurrentRow.Cells[0].Value.ToString() ;
-        }
+            try
+            {
+                txtCod.Text = dgvCarros.CurrentRow.Cells[0].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {

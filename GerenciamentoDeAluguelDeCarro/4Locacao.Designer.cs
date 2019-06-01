@@ -33,7 +33,7 @@
             this.txtCodCliente = new System.Windows.Forms.TextBox();
             this.txtCnhCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbTipoCnh = new System.Windows.Forms.ComboBox();
+            this.cbTipoCnhCliente = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCodigoFuncionario = new System.Windows.Forms.TextBox();
@@ -43,7 +43,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtCidadeCliente = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.cbEstadoCliente = new System.Windows.Forms.ComboBox();
             this.txtMarcaVeiculo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCodigoVeiculo = new System.Windows.Forms.TextBox();
@@ -61,22 +60,19 @@
             this.txtOdometroVeiculo = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.cbTanqueVeiculo = new System.Windows.Forms.ComboBox();
-            this.txtSituacaoVeiculo = new System.Windows.Forms.ComboBox();
+            this.cbSituacaoVeiculo = new System.Windows.Forms.ComboBox();
             this.btnGerarContrato = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnCalcularTotal = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.dtpLocacao = new System.Windows.Forms.DateTimePicker();
             this.label27 = new System.Windows.Forms.Label();
-            this.cbCategoriaVeiculo = new System.Windows.Forms.ComboBox();
+            this.cbCategoriaCarro = new System.Windows.Forms.ComboBox();
             this.dtpDevolucao = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtCepCliente = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtNumeroCliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtComplementoCliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -84,6 +80,10 @@
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
+            this.txtCepCliente = new System.Windows.Forms.MaskedTextBox();
+            this.cbEstadoCliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -111,6 +111,7 @@
             this.txtCodCliente.Name = "txtCodCliente";
             this.txtCodCliente.Size = new System.Drawing.Size(201, 20);
             this.txtCodCliente.TabIndex = 2;
+            this.txtCodCliente.TextChanged += new System.EventHandler(this.txtCodCliente_TextChanged);
             // 
             // txtCnhCliente
             // 
@@ -128,13 +129,19 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "CNH:";
             // 
-            // cbTipoCnh
+            // cbTipoCnhCliente
             // 
-            this.cbTipoCnh.FormattingEnabled = true;
-            this.cbTipoCnh.Location = new System.Drawing.Point(238, 185);
-            this.cbTipoCnh.Name = "cbTipoCnh";
-            this.cbTipoCnh.Size = new System.Drawing.Size(58, 21);
-            this.cbTipoCnh.TabIndex = 5;
+            this.cbTipoCnhCliente.FormattingEnabled = true;
+            this.cbTipoCnhCliente.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"});
+            this.cbTipoCnhCliente.Location = new System.Drawing.Point(238, 185);
+            this.cbTipoCnhCliente.Name = "cbTipoCnhCliente";
+            this.cbTipoCnhCliente.Size = new System.Drawing.Size(58, 21);
+            this.cbTipoCnhCliente.TabIndex = 5;
             // 
             // label4
             // 
@@ -164,6 +171,7 @@
             this.txtCodigoFuncionario.Name = "txtCodigoFuncionario";
             this.txtCodigoFuncionario.Size = new System.Drawing.Size(201, 20);
             this.txtCodigoFuncionario.TabIndex = 11;
+            this.txtCodigoFuncionario.TextChanged += new System.EventHandler(this.txtCodigoFuncionario_TextChanged);
             // 
             // label7
             // 
@@ -205,7 +213,7 @@
             // 
             // txtCidadeCliente
             // 
-            this.txtCidadeCliente.Location = new System.Drawing.Point(95, 289);
+            this.txtCidadeCliente.Location = new System.Drawing.Point(95, 318);
             this.txtCidadeCliente.Name = "txtCidadeCliente";
             this.txtCidadeCliente.Size = new System.Drawing.Size(100, 20);
             this.txtCidadeCliente.TabIndex = 22;
@@ -213,20 +221,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(194, 292);
+            this.label14.Location = new System.Drawing.Point(194, 321);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 13);
             this.label14.TabIndex = 23;
             this.label14.Text = "Estado:";
-            // 
-            // cbEstadoCliente
-            // 
-            this.cbEstadoCliente.FormattingEnabled = true;
-            this.cbEstadoCliente.Location = new System.Drawing.Point(238, 288);
-            this.cbEstadoCliente.Name = "cbEstadoCliente";
-            this.cbEstadoCliente.Size = new System.Drawing.Size(58, 21);
-            this.cbEstadoCliente.TabIndex = 24;
-            this.cbEstadoCliente.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
             // 
             // txtMarcaVeiculo
             // 
@@ -250,6 +249,7 @@
             this.txtCodigoVeiculo.Name = "txtCodigoVeiculo";
             this.txtCodigoVeiculo.Size = new System.Drawing.Size(201, 20);
             this.txtCodigoVeiculo.TabIndex = 27;
+            this.txtCodigoVeiculo.TextChanged += new System.EventHandler(this.txtCodigoVeiculo_TextChanged);
             // 
             // label16
             // 
@@ -311,7 +311,7 @@
             this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(396, 318);
+            this.label20.Location = new System.Drawing.Point(396, 321);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(392, 20);
             this.label20.TabIndex = 34;
@@ -320,7 +320,7 @@
             // 
             // txtTaxaVeiculo
             // 
-            this.txtTaxaVeiculo.Location = new System.Drawing.Point(539, 341);
+            this.txtTaxaVeiculo.Location = new System.Drawing.Point(539, 344);
             this.txtTaxaVeiculo.Name = "txtTaxaVeiculo";
             this.txtTaxaVeiculo.Size = new System.Drawing.Size(110, 20);
             this.txtTaxaVeiculo.TabIndex = 40;
@@ -328,7 +328,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(427, 344);
+            this.label22.Location = new System.Drawing.Point(427, 347);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(108, 13);
             this.label22.TabIndex = 39;
@@ -369,23 +369,33 @@
             // 
             // cbTanqueVeiculo
             // 
+            this.cbTanqueVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTanqueVeiculo.FormattingEnabled = true;
+            this.cbTanqueVeiculo.Items.AddRange(new object[] {
+            "Cheio",
+            "Médio",
+            "Vazio"});
             this.cbTanqueVeiculo.Location = new System.Drawing.Point(539, 267);
             this.cbTanqueVeiculo.Name = "cbTanqueVeiculo";
             this.cbTanqueVeiculo.Size = new System.Drawing.Size(201, 21);
             this.cbTanqueVeiculo.TabIndex = 45;
             // 
-            // txtSituacaoVeiculo
+            // cbSituacaoVeiculo
             // 
-            this.txtSituacaoVeiculo.FormattingEnabled = true;
-            this.txtSituacaoVeiculo.Location = new System.Drawing.Point(539, 293);
-            this.txtSituacaoVeiculo.Name = "txtSituacaoVeiculo";
-            this.txtSituacaoVeiculo.Size = new System.Drawing.Size(201, 21);
-            this.txtSituacaoVeiculo.TabIndex = 46;
+            this.cbSituacaoVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSituacaoVeiculo.FormattingEnabled = true;
+            this.cbSituacaoVeiculo.Items.AddRange(new object[] {
+            "Disponivel",
+            "Indisponivel",
+            "Alugado"});
+            this.cbSituacaoVeiculo.Location = new System.Drawing.Point(539, 296);
+            this.cbSituacaoVeiculo.Name = "cbSituacaoVeiculo";
+            this.cbSituacaoVeiculo.Size = new System.Drawing.Size(201, 21);
+            this.cbSituacaoVeiculo.TabIndex = 46;
             // 
             // btnGerarContrato
             // 
-            this.btnGerarContrato.Location = new System.Drawing.Point(396, 411);
+            this.btnGerarContrato.Location = new System.Drawing.Point(396, 414);
             this.btnGerarContrato.Name = "btnGerarContrato";
             this.btnGerarContrato.Size = new System.Drawing.Size(392, 27);
             this.btnGerarContrato.TabIndex = 47;
@@ -405,7 +415,7 @@
             // 
             // btnCalcularTotal
             // 
-            this.btnCalcularTotal.Location = new System.Drawing.Point(656, 342);
+            this.btnCalcularTotal.Location = new System.Drawing.Point(656, 345);
             this.btnCalcularTotal.Name = "btnCalcularTotal";
             this.btnCalcularTotal.Size = new System.Drawing.Size(132, 23);
             this.btnCalcularTotal.TabIndex = 49;
@@ -437,13 +447,14 @@
             this.label27.TabIndex = 53;
             this.label27.Text = "Categoria";
             // 
-            // cbCategoriaVeiculo
+            // cbCategoriaCarro
             // 
-            this.cbCategoriaVeiculo.FormattingEnabled = true;
-            this.cbCategoriaVeiculo.Location = new System.Drawing.Point(539, 165);
-            this.cbCategoriaVeiculo.Name = "cbCategoriaVeiculo";
-            this.cbCategoriaVeiculo.Size = new System.Drawing.Size(201, 21);
-            this.cbCategoriaVeiculo.TabIndex = 54;
+            this.cbCategoriaCarro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoriaCarro.FormattingEnabled = true;
+            this.cbCategoriaCarro.Location = new System.Drawing.Point(539, 165);
+            this.cbCategoriaCarro.Name = "cbCategoriaCarro";
+            this.cbCategoriaCarro.Size = new System.Drawing.Size(201, 21);
+            this.cbCategoriaCarro.TabIndex = 54;
             // 
             // dtpDevolucao
             // 
@@ -464,7 +475,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(51, 292);
+            this.label13.Location = new System.Drawing.Point(51, 321);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(43, 13);
             this.label13.TabIndex = 21;
@@ -487,29 +498,6 @@
             this.label29.Size = new System.Drawing.Size(49, 13);
             this.label29.TabIndex = 107;
             this.label29.Text = "Situação";
-            // 
-            // txtCepCliente
-            // 
-            this.txtCepCliente.Location = new System.Drawing.Point(95, 263);
-            this.txtCepCliente.Name = "txtCepCliente";
-            this.txtCepCliente.Size = new System.Drawing.Size(201, 20);
-            this.txtCepCliente.TabIndex = 16;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(184, 240);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(22, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "N°:";
-            // 
-            // txtNumeroCliente
-            // 
-            this.txtNumeroCliente.Location = new System.Drawing.Point(213, 237);
-            this.txtNumeroCliente.Name = "txtNumeroCliente";
-            this.txtNumeroCliente.Size = new System.Drawing.Size(83, 20);
-            this.txtNumeroCliente.TabIndex = 18;
             // 
             // label12
             // 
@@ -570,25 +558,91 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(40, 292);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 13);
+            this.label21.TabIndex = 112;
+            this.label21.Text = "Telefone";
+            // 
+            // txtTelefoneCliente
+            // 
+            this.txtTelefoneCliente.Location = new System.Drawing.Point(95, 289);
+            this.txtTelefoneCliente.Mask = "(99)9999-9999";
+            this.txtTelefoneCliente.Name = "txtTelefoneCliente";
+            this.txtTelefoneCliente.Size = new System.Drawing.Size(83, 20);
+            this.txtTelefoneCliente.TabIndex = 113;
+            // 
+            // txtCepCliente
+            // 
+            this.txtCepCliente.Location = new System.Drawing.Point(95, 263);
+            this.txtCepCliente.Mask = "99999-999";
+            this.txtCepCliente.Name = "txtCepCliente";
+            this.txtCepCliente.Size = new System.Drawing.Size(83, 20);
+            this.txtCepCliente.TabIndex = 114;
+            // 
+            // cbEstadoCliente
+            // 
+            this.cbEstadoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstadoCliente.FormattingEnabled = true;
+            this.cbEstadoCliente.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.cbEstadoCliente.Location = new System.Drawing.Point(238, 318);
+            this.cbEstadoCliente.Name = "cbEstadoCliente";
+            this.cbEstadoCliente.Size = new System.Drawing.Size(58, 21);
+            this.cbEstadoCliente.TabIndex = 115;
+            // 
             // frmLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbEstadoCliente);
+            this.Controls.Add(this.txtCepCliente);
+            this.Controls.Add(this.txtTelefoneCliente);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtNomeCliente);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.dtpDevolucao);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.cbCategoriaVeiculo);
+            this.Controls.Add(this.cbCategoriaCarro);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.dtpLocacao);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.btnCalcularTotal);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnGerarContrato);
-            this.Controls.Add(this.txtSituacaoVeiculo);
+            this.Controls.Add(this.cbSituacaoVeiculo);
             this.Controls.Add(this.cbTanqueVeiculo);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.txtOdometroVeiculo);
@@ -606,15 +660,11 @@
             this.Controls.Add(this.txtCodigoVeiculo);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.cbEstadoCliente);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtCidadeCliente);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtComplementoCliente);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtNumeroCliente);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtCepCliente);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNomeFuncionario);
@@ -625,7 +675,7 @@
             this.Controls.Add(this.txtEnderecoCliente);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbTipoCnh);
+            this.Controls.Add(this.cbTipoCnhCliente);
             this.Controls.Add(this.txtCnhCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCodCliente);
@@ -648,7 +698,7 @@
         private System.Windows.Forms.TextBox txtCodCliente;
         private System.Windows.Forms.TextBox txtCnhCliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbTipoCnh;
+        private System.Windows.Forms.ComboBox cbTipoCnhCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCodigoFuncionario;
@@ -658,7 +708,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCidadeCliente;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cbEstadoCliente;
         private System.Windows.Forms.TextBox txtMarcaVeiculo;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtCodigoVeiculo;
@@ -676,22 +725,19 @@
         private System.Windows.Forms.TextBox txtOdometroVeiculo;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox cbTanqueVeiculo;
-        private System.Windows.Forms.ComboBox txtSituacaoVeiculo;
+        private System.Windows.Forms.ComboBox cbSituacaoVeiculo;
         private System.Windows.Forms.Button btnGerarContrato;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnCalcularTotal;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DateTimePicker dtpLocacao;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.ComboBox cbCategoriaVeiculo;
+        private System.Windows.Forms.ComboBox cbCategoriaCarro;
         private System.Windows.Forms.DateTimePicker dtpDevolucao;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txtCepCliente;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtNumeroCliente;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtComplementoCliente;
         private System.Windows.Forms.Label label5;
@@ -699,5 +745,9 @@
         private System.Windows.Forms.TextBox txtNomeCliente;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.MaskedTextBox txtTelefoneCliente;
+        private System.Windows.Forms.MaskedTextBox txtCepCliente;
+        private System.Windows.Forms.ComboBox cbEstadoCliente;
     }
 }

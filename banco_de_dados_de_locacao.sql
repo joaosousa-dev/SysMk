@@ -41,13 +41,13 @@ marca varchar (30),
 modelo varchar (30),
 ano int ,
 situacao varchar(15),
-categoria varchar (30),
 odometro int ,
 estado varchar (40),
 cod_categoria int,
+categoria varchar(50),
 foreign key (cod_categoria) references categoria (cod_categoria)
 )
-
+drop table veiculo
 create table locacao
 (
 cod_locacao int identity(1,1)primary key,
@@ -65,7 +65,7 @@ foreign key (cod_fun) references funcionario (cod_fun)
 create table categoria
 (
 cod_categoria int primary key identity(1,1),
-nome varchar(20),
+nome_categoria varchar(20),
 preco float (10)
 )
 
@@ -79,5 +79,6 @@ cod_contrato int primary key identity(1,1),
 select * from cliente
 select * from veiculo
 select * from funcionario
+select * from categoria
 
 drop table veiculo

@@ -53,6 +53,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtCodCategoria = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,18 +119,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(158, 230);
+            this.label5.Location = new System.Drawing.Point(119, 230);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Categoria";
+            this.label5.Text = "Codigo Categoria";
             // 
             // cbCategoriaCarro
             // 
+            this.cbCategoriaCarro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoriaCarro.FormattingEnabled = true;
-            this.cbCategoriaCarro.Location = new System.Drawing.Point(213, 227);
+            this.cbCategoriaCarro.Location = new System.Drawing.Point(306, 226);
             this.cbCategoriaCarro.Name = "cbCategoriaCarro";
-            this.cbCategoriaCarro.Size = new System.Drawing.Size(178, 21);
+            this.cbCategoriaCarro.Size = new System.Drawing.Size(85, 21);
             this.cbCategoriaCarro.TabIndex = 8;
             // 
             // txtAnoCarro
@@ -169,7 +171,7 @@
             // 
             // btnCadastrarCarro
             // 
-            this.btnCadastrarCarro.Location = new System.Drawing.Point(341, 383);
+            this.btnCadastrarCarro.Location = new System.Drawing.Point(341, 360);
             this.btnCadastrarCarro.Name = "btnCadastrarCarro";
             this.btnCadastrarCarro.Size = new System.Drawing.Size(124, 41);
             this.btnCadastrarCarro.TabIndex = 26;
@@ -180,7 +182,7 @@
             // rbuArCarro
             // 
             this.rbuArCarro.AutoSize = true;
-            this.rbuArCarro.Location = new System.Drawing.Point(173, 333);
+            this.rbuArCarro.Location = new System.Drawing.Point(173, 328);
             this.rbuArCarro.Name = "rbuArCarro";
             this.rbuArCarro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rbuArCarro.Size = new System.Drawing.Size(103, 17);
@@ -192,7 +194,7 @@
             // rbuDirecaoCarro
             // 
             this.rbuDirecaoCarro.AutoSize = true;
-            this.rbuDirecaoCarro.Location = new System.Drawing.Point(173, 356);
+            this.rbuDirecaoCarro.Location = new System.Drawing.Point(173, 351);
             this.rbuDirecaoCarro.Name = "rbuDirecaoCarro";
             this.rbuDirecaoCarro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rbuDirecaoCarro.Size = new System.Drawing.Size(149, 17);
@@ -204,7 +206,7 @@
             // rbuCambioCarro
             // 
             this.rbuCambioCarro.AutoSize = true;
-            this.rbuCambioCarro.Location = new System.Drawing.Point(173, 310);
+            this.rbuCambioCarro.Location = new System.Drawing.Point(173, 305);
             this.rbuCambioCarro.Name = "rbuCambioCarro";
             this.rbuCambioCarro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rbuCambioCarro.Size = new System.Drawing.Size(116, 17);
@@ -215,13 +217,14 @@
             // 
             // cbEstadoCarro
             // 
+            this.cbEstadoCarro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstadoCarro.FormattingEnabled = true;
             this.cbEstadoCarro.Items.AddRange(new object[] {
             "Péssimo",
             "Ruim",
             "Bom",
             "Excelente"});
-            this.cbEstadoCarro.Location = new System.Drawing.Point(213, 254);
+            this.cbEstadoCarro.Location = new System.Drawing.Point(213, 253);
             this.cbEstadoCarro.Name = "cbEstadoCarro";
             this.cbEstadoCarro.Size = new System.Drawing.Size(178, 21);
             this.cbEstadoCarro.TabIndex = 32;
@@ -229,7 +232,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(167, 257);
+            this.label6.Location = new System.Drawing.Point(167, 256);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 33;
@@ -253,12 +256,13 @@
             // 
             // cbSituacao
             // 
+            this.cbSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSituacao.FormattingEnabled = true;
             this.cbSituacao.Items.AddRange(new object[] {
             "Disponivel",
             "Indisponivel",
             "Alugado"});
-            this.cbSituacao.Location = new System.Drawing.Point(213, 281);
+            this.cbSituacao.Location = new System.Drawing.Point(213, 276);
             this.cbSituacao.Name = "cbSituacao";
             this.cbSituacao.Size = new System.Drawing.Size(178, 21);
             this.cbSituacao.TabIndex = 36;
@@ -266,7 +270,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(158, 284);
+            this.label8.Location = new System.Drawing.Point(161, 280);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 37;
@@ -291,11 +295,20 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // txtCodCategoria
+            // 
+            this.txtCodCategoria.Location = new System.Drawing.Point(213, 227);
+            this.txtCodCategoria.Name = "txtCodCategoria";
+            this.txtCodCategoria.Size = new System.Drawing.Size(87, 20);
+            this.txtCodCategoria.TabIndex = 38;
+            this.txtCodCategoria.TextChanged += new System.EventHandler(this.txtCodCategoria_TextChanged);
+            // 
             // frmCadastraVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCodCategoria);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbSituacao);
             this.Controls.Add(this.txtOdometroCarro);
@@ -359,5 +372,6 @@
         private System.Windows.Forms.TextBox txtOdometroCarro;
         private System.Windows.Forms.ComboBox cbSituacao;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCodCategoria;
     }
 }
