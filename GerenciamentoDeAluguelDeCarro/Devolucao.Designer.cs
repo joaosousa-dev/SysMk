@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpLocacao = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCalcularTotal = new System.Windows.Forms.Button();
             this.btnPagamento = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -71,14 +71,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbTipoCnh = new System.Windows.Forms.ComboBox();
+            this.txtCnhCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDevolucao = new System.Windows.Forms.DateTimePicker();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -86,14 +86,16 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtCodCliente = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtpLocacao
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(533, 220);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(201, 20);
-            this.dateTimePicker1.TabIndex = 102;
+            this.dtpLocacao.Location = new System.Drawing.Point(533, 220);
+            this.dtpLocacao.Name = "dtpLocacao";
+            this.dtpLocacao.Size = new System.Drawing.Size(201, 20);
+            this.dtpLocacao.TabIndex = 102;
             // 
             // label26
             // 
@@ -104,14 +106,15 @@
             this.label26.TabIndex = 101;
             this.label26.Text = "Dia da locação";
             // 
-            // button3
+            // btnCalcularTotal
             // 
-            this.button3.Location = new System.Drawing.Point(650, 348);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 23);
-            this.button3.TabIndex = 100;
-            this.button3.Text = "Calcular Total";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCalcularTotal.Location = new System.Drawing.Point(650, 348);
+            this.btnCalcularTotal.Name = "btnCalcularTotal";
+            this.btnCalcularTotal.Size = new System.Drawing.Size(132, 23);
+            this.btnCalcularTotal.TabIndex = 100;
+            this.btnCalcularTotal.Text = "Calcular Total";
+            this.btnCalcularTotal.UseVisualStyleBackColor = true;
+            this.btnCalcularTotal.Click += new System.EventHandler(this.btnCalcularTotal_Click);
             // 
             // btnPagamento
             // 
@@ -119,7 +122,7 @@
             this.btnPagamento.Name = "btnPagamento";
             this.btnPagamento.Size = new System.Drawing.Size(392, 27);
             this.btnPagamento.TabIndex = 98;
-            this.btnPagamento.Text = "Pagamento";
+            this.btnPagamento.Text = "Devolução";
             this.btnPagamento.UseVisualStyleBackColor = true;
             this.btnPagamento.Click += new System.EventHandler(this.btnPagamento_Click);
             // 
@@ -221,9 +224,9 @@
             // 
             // textBox13
             // 
+            this.textBox13.Enabled = false;
             this.textBox13.Location = new System.Drawing.Point(533, 149);
             this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(201, 20);
             this.textBox13.TabIndex = 86;
             // 
@@ -238,9 +241,9 @@
             // 
             // textBox12
             // 
+            this.textBox12.Enabled = false;
             this.textBox12.Location = new System.Drawing.Point(533, 123);
             this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(201, 20);
             this.textBox12.TabIndex = 84;
             // 
@@ -255,9 +258,9 @@
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Location = new System.Drawing.Point(533, 97);
             this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(201, 20);
             this.textBox10.TabIndex = 82;
             // 
@@ -301,8 +304,10 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(232, 273);
+            this.comboBox2.Location = new System.Drawing.Point(232, 296);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(58, 21);
             this.comboBox2.TabIndex = 77;
@@ -310,7 +315,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(188, 277);
+            this.label14.Location = new System.Drawing.Point(188, 300);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 13);
             this.label14.TabIndex = 76;
@@ -318,16 +323,16 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(89, 274);
+            this.textBox9.Enabled = false;
+            this.textBox9.Location = new System.Drawing.Point(89, 297);
             this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(100, 20);
             this.textBox9.TabIndex = 75;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(45, 277);
+            this.label13.Location = new System.Drawing.Point(45, 300);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(43, 13);
             this.label13.TabIndex = 74;
@@ -335,16 +340,16 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(89, 222);
+            this.textBox8.Enabled = false;
+            this.textBox8.Location = new System.Drawing.Point(89, 245);
             this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(83, 20);
             this.textBox8.TabIndex = 73;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(20, 225);
+            this.label12.Location = new System.Drawing.Point(20, 248);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 13);
             this.label12.TabIndex = 72;
@@ -352,16 +357,16 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(207, 222);
+            this.textBox7.Enabled = false;
+            this.textBox7.Location = new System.Drawing.Point(207, 245);
             this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(83, 20);
             this.textBox7.TabIndex = 71;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(178, 225);
+            this.label11.Location = new System.Drawing.Point(178, 248);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(22, 13);
             this.label11.TabIndex = 70;
@@ -369,16 +374,16 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(89, 248);
+            this.textBox6.Enabled = false;
+            this.textBox6.Location = new System.Drawing.Point(89, 271);
             this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(201, 20);
             this.textBox6.TabIndex = 69;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(52, 251);
+            this.label10.Location = new System.Drawing.Point(52, 274);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 68;
@@ -444,16 +449,16 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(89, 196);
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(89, 219);
             this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(201, 20);
             this.textBox3.TabIndex = 61;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 199);
+            this.label5.Location = new System.Drawing.Point(27, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 60;
@@ -462,31 +467,34 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(195, 147);
+            this.label4.Location = new System.Drawing.Point(195, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 59;
             this.label4.Text = "Tipo:";
             // 
-            // comboBox1
+            // cbTipoCnh
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(232, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(58, 21);
-            this.comboBox1.TabIndex = 58;
+            this.cbTipoCnh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoCnh.Enabled = false;
+            this.cbTipoCnh.FormattingEnabled = true;
+            this.cbTipoCnh.Location = new System.Drawing.Point(232, 167);
+            this.cbTipoCnh.Name = "cbTipoCnh";
+            this.cbTipoCnh.Size = new System.Drawing.Size(58, 21);
+            this.cbTipoCnh.TabIndex = 58;
             // 
-            // textBox2
+            // txtCnhCliente
             // 
-            this.textBox2.Location = new System.Drawing.Point(89, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 57;
+            this.txtCnhCliente.Enabled = false;
+            this.txtCnhCliente.Location = new System.Drawing.Point(89, 167);
+            this.txtCnhCliente.Name = "txtCnhCliente";
+            this.txtCnhCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtCnhCliente.TabIndex = 57;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 147);
+            this.label3.Location = new System.Drawing.Point(45, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 56;
@@ -494,16 +502,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 170);
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(89, 193);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(201, 20);
             this.textBox1.TabIndex = 55;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 173);
+            this.label2.Location = new System.Drawing.Point(45, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 54;
@@ -528,15 +536,16 @@
             this.label27.TabIndex = 103;
             this.label27.Text = "Dia da devolução";
             // 
-            // dateTimePicker2
+            // dtpDevolucao
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(533, 244);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(201, 20);
-            this.dateTimePicker2.TabIndex = 104;
+            this.dtpDevolucao.Location = new System.Drawing.Point(533, 244);
+            this.dtpDevolucao.Name = "dtpDevolucao";
+            this.dtpDevolucao.Size = new System.Drawing.Size(201, 20);
+            this.dtpDevolucao.TabIndex = 104;
             // 
             // comboBox5
             // 
+            this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(533, 172);
             this.comboBox5.Name = "comboBox5";
@@ -583,9 +592,9 @@
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(723, 402);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(36, 13);
+            this.label31.Size = new System.Drawing.Size(13, 13);
             this.label31.TabIndex = 110;
-            this.label31.Text = "-----R$";
+            this.label31.Text = "--";
             // 
             // btnVoltar
             // 
@@ -598,11 +607,29 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(45, 146);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(40, 13);
+            this.label32.TabIndex = 113;
+            this.label32.Text = "Código";
+            // 
+            // txtCodCliente
+            // 
+            this.txtCodCliente.Location = new System.Drawing.Point(89, 143);
+            this.txtCodCliente.Name = "txtCodCliente";
+            this.txtCodCliente.Size = new System.Drawing.Size(201, 20);
+            this.txtCodCliente.TabIndex = 114;
+            // 
             // frmDevolucao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 459);
+            this.Controls.Add(this.txtCodCliente);
+            this.Controls.Add(this.label32);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label30);
@@ -610,11 +637,11 @@
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtpDevolucao);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpLocacao);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnCalcularTotal);
             this.Controls.Add(this.btnPagamento);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
@@ -655,8 +682,8 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cbTipoCnh);
+            this.Controls.Add(this.txtCnhCliente);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -672,9 +699,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpLocacao;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCalcularTotal;
         private System.Windows.Forms.Button btnPagamento;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -715,14 +742,14 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cbTipoCnh;
+        private System.Windows.Forms.TextBox txtCnhCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpDevolucao;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox16;
@@ -730,5 +757,7 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox txtCodCliente;
     }
 }

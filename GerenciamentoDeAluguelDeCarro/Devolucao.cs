@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GerenciamentoDeAluguelDeCarro
 {
     public partial class frmDevolucao : Form
@@ -19,13 +20,17 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnPagamento_Click(object sender, EventArgs e)
         {
-            frmPagamento frm = new frmPagamento();
-            frm.Show();
+            
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCalcularTotal_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

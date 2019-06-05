@@ -67,7 +67,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.dtpLocacao = new System.Windows.Forms.DateTimePicker();
             this.label27 = new System.Windows.Forms.Label();
-            this.cbCategoriaCarro = new System.Windows.Forms.ComboBox();
             this.dtpDevolucao = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -79,11 +78,15 @@
             this.txtEnderecoCliente = new System.Windows.Forms.TextBox();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.txtTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
             this.txtCepCliente = new System.Windows.Forms.MaskedTextBox();
             this.cbEstadoCliente = new System.Windows.Forms.ComboBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.process1 = new System.Diagnostics.Process();
+            this.txtCodCategoria = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbCategoriaCarro = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -320,7 +323,7 @@
             // 
             // txtTaxaVeiculo
             // 
-            this.txtTaxaVeiculo.Location = new System.Drawing.Point(539, 344);
+            this.txtTaxaVeiculo.Location = new System.Drawing.Point(539, 371);
             this.txtTaxaVeiculo.Name = "txtTaxaVeiculo";
             this.txtTaxaVeiculo.Size = new System.Drawing.Size(110, 20);
             this.txtTaxaVeiculo.TabIndex = 40;
@@ -328,7 +331,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(427, 347);
+            this.label22.Location = new System.Drawing.Point(427, 374);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(108, 13);
             this.label22.TabIndex = 39;
@@ -415,7 +418,7 @@
             // 
             // btnCalcularTotal
             // 
-            this.btnCalcularTotal.Location = new System.Drawing.Point(656, 345);
+            this.btnCalcularTotal.Location = new System.Drawing.Point(656, 372);
             this.btnCalcularTotal.Name = "btnCalcularTotal";
             this.btnCalcularTotal.Size = new System.Drawing.Size(132, 23);
             this.btnCalcularTotal.TabIndex = 49;
@@ -446,15 +449,6 @@
             this.label27.Size = new System.Drawing.Size(52, 13);
             this.label27.TabIndex = 53;
             this.label27.Text = "Categoria";
-            // 
-            // cbCategoriaCarro
-            // 
-            this.cbCategoriaCarro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategoriaCarro.FormattingEnabled = true;
-            this.cbCategoriaCarro.Location = new System.Drawing.Point(539, 165);
-            this.cbCategoriaCarro.Name = "cbCategoriaCarro";
-            this.cbCategoriaCarro.Size = new System.Drawing.Size(201, 21);
-            this.cbCategoriaCarro.TabIndex = 54;
             // 
             // dtpDevolucao
             // 
@@ -547,17 +541,6 @@
             this.label30.TabIndex = 108;
             this.label30.Text = "Nome:";
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
-            this.btnVoltar.Location = new System.Drawing.Point(10, 6);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
-            this.btnVoltar.TabIndex = 110;
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -620,11 +603,65 @@
             this.cbEstadoCliente.Size = new System.Drawing.Size(58, 21);
             this.cbEstadoCliente.TabIndex = 115;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
+            this.btnVoltar.Location = new System.Drawing.Point(10, 6);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
+            this.btnVoltar.TabIndex = 110;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // process1
+            // 
+            this.process1.StartInfo.Domain = "";
+            this.process1.StartInfo.LoadUserProfile = false;
+            this.process1.StartInfo.Password = null;
+            this.process1.StartInfo.StandardErrorEncoding = null;
+            this.process1.StartInfo.StandardOutputEncoding = null;
+            this.process1.StartInfo.UserName = "";
+            this.process1.SynchronizingObject = this;
+            this.process1.Exited += new System.EventHandler(this.process1_Exited);
+            // 
+            // txtCodCategoria
+            // 
+            this.txtCodCategoria.Location = new System.Drawing.Point(539, 345);
+            this.txtCodCategoria.Name = "txtCodCategoria";
+            this.txtCodCategoria.Size = new System.Drawing.Size(110, 20);
+            this.txtCodCategoria.TabIndex = 116;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(446, 348);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 13);
+            this.label11.TabIndex = 117;
+            this.label11.Text = "Categoria código";
+            // 
+            // cbCategoriaCarro
+            // 
+            this.cbCategoriaCarro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategoriaCarro.FormattingEnabled = true;
+            this.cbCategoriaCarro.Items.AddRange(new object[] {
+            "Cheio",
+            "Médio",
+            "Vazio"});
+            this.cbCategoriaCarro.Location = new System.Drawing.Point(541, 165);
+            this.cbCategoriaCarro.Name = "cbCategoriaCarro";
+            this.cbCategoriaCarro.Size = new System.Drawing.Size(201, 21);
+            this.cbCategoriaCarro.TabIndex = 118;
+            // 
             // frmLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbCategoriaCarro);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtCodCategoria);
             this.Controls.Add(this.cbEstadoCliente);
             this.Controls.Add(this.txtCepCliente);
             this.Controls.Add(this.txtTelefoneCliente);
@@ -635,7 +672,6 @@
             this.Controls.Add(this.label29);
             this.Controls.Add(this.dtpDevolucao);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.cbCategoriaCarro);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.dtpLocacao);
             this.Controls.Add(this.label26);
@@ -732,7 +768,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DateTimePicker dtpLocacao;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.ComboBox cbCategoriaCarro;
         private System.Windows.Forms.DateTimePicker dtpDevolucao;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label13;
@@ -749,5 +784,9 @@
         private System.Windows.Forms.MaskedTextBox txtTelefoneCliente;
         private System.Windows.Forms.MaskedTextBox txtCepCliente;
         private System.Windows.Forms.ComboBox cbEstadoCliente;
+        private System.Diagnostics.Process process1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtCodCategoria;
+        private System.Windows.Forms.ComboBox cbCategoriaCarro;
     }
 }

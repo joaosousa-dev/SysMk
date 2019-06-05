@@ -36,6 +36,7 @@
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.carrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +49,8 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCategoriasDeVeiculos = new System.Windows.Forms.Button();
@@ -59,7 +60,7 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnLocacao = new System.Windows.Forms.Button();
             this.btnVeiculos = new System.Windows.Forms.Button();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.locaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,30 +108,37 @@
             // veículosToolStripMenuItem
             // 
             this.veículosToolStripMenuItem.Name = "veículosToolStripMenuItem";
-            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.veículosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.veículosToolStripMenuItem.Text = "Veículos";
             this.veículosToolStripMenuItem.Click += new System.EventHandler(this.veículosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // carrosToolStripMenuItem1
             // 
             this.carrosToolStripMenuItem1.Name = "carrosToolStripMenuItem1";
-            this.carrosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.carrosToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.carrosToolStripMenuItem1.Text = "Funcionários";
             this.carrosToolStripMenuItem1.Click += new System.EventHandler(this.carrosToolStripMenuItem1_Click);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.categoriaToolStripMenuItem.Text = "Categorias";
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem
             // 
@@ -138,7 +146,8 @@
             this.carrosToolStripMenuItem,
             this.clientesToolStripMenuItem,
             this.funcionáriosToolStripMenuItem,
-            this.categoriasToolStripMenuItem});
+            this.categoriasToolStripMenuItem,
+            this.locaçãoToolStripMenuItem});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
             this.bToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.bToolStripMenuItem.Text = "Consultar";
@@ -146,28 +155,28 @@
             // carrosToolStripMenuItem
             // 
             this.carrosToolStripMenuItem.Name = "carrosToolStripMenuItem";
-            this.carrosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.carrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.carrosToolStripMenuItem.Text = "Veículos";
             this.carrosToolStripMenuItem.Click += new System.EventHandler(this.carrosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
@@ -232,17 +241,6 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.ForeColor = System.Drawing.Color.Blue;
-            this.lblData.Location = new System.Drawing.Point(44, 19);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(78, 16);
-            this.lblData.TabIndex = 0;
-            this.lblData.Text = "dd/mm/aa";
-            // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
@@ -253,6 +251,17 @@
             this.lblHora.Size = new System.Drawing.Size(72, 16);
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "hh:mm:ss";
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.Blue;
+            this.lblData.Location = new System.Drawing.Point(44, 19);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(78, 16);
+            this.lblData.TabIndex = 0;
+            this.lblData.Text = "dd/mm/aa";
             // 
             // pictureBox2
             // 
@@ -372,12 +381,12 @@
             this.btnVeiculos.UseVisualStyleBackColor = true;
             this.btnVeiculos.Click += new System.EventHandler(this.btnVeiculos_Click);
             // 
-            // usuariosToolStripMenuItem
+            // locaçãoToolStripMenuItem
             // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
+            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.locaçãoToolStripMenuItem.Text = "Locação";
+            this.locaçãoToolStripMenuItem.Click += new System.EventHandler(this.locaçãoToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -448,5 +457,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem locaçãoToolStripMenuItem;
     }
 }

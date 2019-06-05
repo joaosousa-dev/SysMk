@@ -156,6 +156,12 @@ namespace GerenciamentoDeAluguelDeCarro
             else
                 MessageBox.Show("O usuário '"+lblUsuario.Text+"' não tem permissão para isso!", "erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void locaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaLocacao frm = new frmConsultaLocacao();
+            frm.Show();
+        }
     }
 }
 

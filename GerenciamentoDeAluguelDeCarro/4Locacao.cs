@@ -46,37 +46,44 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnGerarContrato_Click(object sender, EventArgs e)
         {
-            
+            frmPagamento frm = new frmPagamento();
+            frm.Show();
                 if (txtCodigoFuncionario.Text == string.Empty || txtCodigoVeiculo.Text == string.Empty || txtCodCliente.Text == string.Empty)
                 {
                     MessageBox.Show("Preencha todos os códigos", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                con.Open();
-                comando.CommandText = "INSERT INTO locacao(cod_cliente,cod_fun,cod_veiculo,data_aluguel,data_devolucao)VALUES('" + txtCodCliente.Text + "','" + txtCodigoFuncionario.Text + "','" + txtCodigoVeiculo.Text + "','" + dtpLocacao.Value.Date.ToString("dd/MM/yyyy") + "','" + dtpDevolucao.Value.Date.ToString("dd/MM/yyyy") + "')";
-                comando.ExecuteNonQuery();
+                try
+                {
+                    con.Open();
+                    comando.CommandText = "INSERT INTO locacao(cod_cliente,nome_cliente,cod_fun,nome_fun,cod_veiculo,modelo_veiculo,data_aluguel,data_devolucao,situacao)VALUES('" + txtCodCliente.Text + "','" + txtNomeCliente.Text + "','" + txtCodigoFuncionario.Text + "','" + txtNomeFuncionario.Text + "','" + txtCodigoVeiculo.Text + "','" + txtModeloVeiculo.Text + "','" + dtpLocacao.Value.Date.ToString("dd/MM/yyyy") + "','" + dtpDevolucao.Value.Date.ToString("dd/MM/yyyy") + "','Em aberto')";
+                    comando.ExecuteNonQuery();
 
-                comando.CommandText = "UPDATE veiculo SET tanque='" + cbTanqueVeiculo.Text + "' WHERE cod_veiculo='" + txtCodigoVeiculo.Text + "'";
-                comando.ExecuteNonQuery();
+                    comando.CommandText = "UPDATE veiculo SET tanque='" + cbTanqueVeiculo.Text + "' WHERE cod_veiculo='" + txtCodigoVeiculo.Text + "'";
+                    comando.ExecuteNonQuery();
 
-                comando.CommandText = "UPDATE veiculo SET situacao='" + cbSituacaoVeiculo.Text + "' WHERE cod_veiculo='" + txtCodigoVeiculo.Text + "'";
-                comando.ExecuteNonQuery();
+                    comando.CommandText = "UPDATE veiculo SET situacao='" + cbSituacaoVeiculo.Text + "',odometro='"+txtOdometroVeiculo.Text+"' WHERE cod_veiculo='" + txtCodigoVeiculo.Text + "'";
+                    comando.ExecuteNonQuery();
 
-                Document doc = new Document(PageSize.A4);
-                doc.SetMargins(40, 40, 40, 80);
-                doc.AddCreationDate();//adicionando as configuracoes
-                string caminho = @"D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\Contratos\" + "CONTRATO" + txtCodCliente.Text + ".pdf";
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
-                doc.Open();
-                Paragraph paragrafo = new Paragraph("    Eu, " + txtNomeCliente.Text + ", Cnh: " + txtCnhCliente.Text + ",Inscrito no CPF: ___.___.___-__ E RG______________ residente e domiciliado(a) à " + txtEnderecoCliente.Text + ", na cidade de " + txtCidadeCliente.Text + " - " + cbEstadoCliente.Text + ",por meio deste instrumento declaro me responsabilizar pela conservação de um Veiculo " + txtMarcaVeiculo.Text + "," + txtModeloVeiculo.Text + "," + txtAnoVeiculo.Text + ".\n    Me comprometo a devolver o mencionado bem em perfeito estado de conservação, como atualmente se encontra, ao fim do prazo estabelecido.\n    Em caso de extravio ou danos que provoquem a perda total ou parcial do bem, fico obrigado a ressarcir o proprietário dos prejuízos ocasionados.\n\n\n" + dtpLocacao.Text + "\n\nAssinatura:\n_____________________________________\n\n\n\nAtesto que o bem foi devolvido em " + dtpDevolucao.Text + ", Nas seguintes condições: \n\n(_)Perfeito Estado\n(_)Com Defeitos\n(_)Faltando peças /acessórios\n");
-                doc.Add(paragrafo);
-                MessageBox.Show("Veiculo alugado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                doc.Close();
-                con.Close();
+                    Document doc = new Document(PageSize.A4);
+                    doc.SetMargins(40, 40, 40, 80);
+                    doc.AddCreationDate();//adicionando as configuracoes
+                    string caminho = @"D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\Contratos\" + "CONTRATO" + txtCodCliente.Text + ".pdf";
+                    PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
+                    doc.Open();
+                    Paragraph paragrafo = new Paragraph("    Eu, " + txtNomeCliente.Text + ", Cnh: " + txtCnhCliente.Text + ",Inscrito no CPF: ___.___.___-__ E RG______________ residente e domiciliado(a) à " + txtEnderecoCliente.Text + ", na cidade de " + txtCidadeCliente.Text + " - " + cbEstadoCliente.Text + ",por meio deste instrumento declaro me responsabilizar pela conservação de um Veiculo " + txtMarcaVeiculo.Text + "," + txtModeloVeiculo.Text + "," + txtAnoVeiculo.Text + ".\n    Me comprometo a devolver o mencionado bem em perfeito estado de conservação, como atualmente se encontra, ao fim do prazo estabelecido.\n    Em caso de extravio ou danos que provoquem a perda total ou parcial do bem, fico obrigado a ressarcir o proprietário dos prejuízos ocasionados.\n\n\n" + dtpLocacao.Text + "\n\nAssinatura:\n_____________________________________\n\n\n\nAtesto que o bem foi devolvido em " + dtpDevolucao.Text + ", Nas seguintes condições: \n\n(_)Perfeito Estado\n(_)Com Defeitos\n(_)Faltando peças /acessórios\n");
+                    doc.Add(paragrafo);
+                    MessageBox.Show("Veiculo alugado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    doc.Close();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    con.Close();
+                }
             }
-            
-           
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -108,7 +115,30 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void txtCodCliente_TextChanged(object sender, EventArgs e)
         {
-            carregatxtCliente();
+            if (txtCodCliente.Text != string.Empty)
+            {
+                carregatxtCliente();
+                txtNomeCliente.Enabled = false;
+                txtCnhCliente.Enabled = false;
+                txtEnderecoCliente.Enabled = false;
+                txtComplementoCliente.Enabled = false;
+                txtCepCliente.Enabled = false;
+                txtCidadeCliente.Enabled = false;
+                cbEstadoCliente.Enabled = false;
+                cbTipoCnhCliente.Enabled = false;
+                txtTelefoneCliente.Enabled = false;
+            }else
+            {
+                txtNomeCliente.Enabled = true;
+                txtCnhCliente.Enabled = true;
+                txtEnderecoCliente.Enabled = true;
+                txtComplementoCliente.Enabled = true;
+                txtCepCliente.Enabled = true;
+                txtCidadeCliente.Enabled = true;
+                cbEstadoCliente.Enabled = true;
+                cbTipoCnhCliente.Enabled = true;
+                txtTelefoneCliente.Enabled = true;
+            }
         }
 
         public void carregatxtCliente()
@@ -160,7 +190,20 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void txtCodigoVeiculo_TextChanged(object sender, EventArgs e)
         {
-            carregatxtVeiculo();
+            if (txtCodigoVeiculo.Text != string.Empty)
+            {
+                carregatxtVeiculo();
+                txtModeloVeiculo.Enabled = false;
+                txtMarcaVeiculo.Enabled = false;
+                txtAnoVeiculo.Enabled = false;
+            }
+            else
+            {
+                txtModeloVeiculo.Enabled = true;
+                txtMarcaVeiculo.Enabled = true;
+                txtAnoVeiculo.Enabled = true;
+            }
+            
         }
         public void carregatxtVeiculo()
         {
@@ -236,7 +279,31 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void txtCodigoFuncionario_TextChanged(object sender, EventArgs e)
         {
-            carregartxtFun();
+            if (txtCodigoFuncionario.Text != string.Empty)
+            {
+                carregartxtFun();
+                txtNomeFuncionario.Enabled = false;
+            }
+            else
+            {
+                txtNomeFuncionario.Enabled = true;
+            }
+        }
+
+        private void process1_Exited(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCategoriaCarro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                      
+        }
+      
+
+        private void cbCategoriaCarro_SelectedValueChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

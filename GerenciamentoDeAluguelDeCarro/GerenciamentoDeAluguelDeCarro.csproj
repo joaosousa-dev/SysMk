@@ -105,6 +105,12 @@
     <Compile Include="frmCadastrarUsuario.Designer.cs">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaLocacao.Designer.cs">
+      <DependentUpon>frmConsultaLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositorio\conexao.cs" />
     <Compile Include="Model\controle.cs" />
     <Compile Include="Devolucao.cs">
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastrarUsuario.resx">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaLocacao.resx">
+      <DependentUpon>frmConsultaLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPagamento.resx">
       <DependentUpon>frmPagamento.cs</DependentUpon>

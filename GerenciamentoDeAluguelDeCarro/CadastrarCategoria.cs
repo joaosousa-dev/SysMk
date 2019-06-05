@@ -67,9 +67,15 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void dgvCategoria_SelectionChanged(object sender, EventArgs e)
         {
-            txtNome.Text = dgvCategoria.CurrentRow.Cells[1].Value.ToString();
-            txtPreco.Text = dgvCategoria.CurrentRow.Cells[2].Value.ToString();
-
+            try
+            {
+                txtNome.Text = dgvCategoria.CurrentRow.Cells[1].Value.ToString();
+                txtPreco.Text = dgvCategoria.CurrentRow.Cells[2].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
