@@ -84,16 +84,18 @@
             this.cbEstadoCliente = new System.Windows.Forms.ComboBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.process1 = new System.Diagnostics.Process();
-            this.txtCodCategoria = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.txtDias = new System.Windows.Forms.TextBox();
+            this.lblDias = new System.Windows.Forms.Label();
             this.cbCategoriaCarro = new System.Windows.Forms.ComboBox();
+            this.txtCodCategoria = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(336, 9);
+            this.label1.Location = new System.Drawing.Point(330, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 29);
             this.label1.TabIndex = 0;
@@ -314,7 +316,7 @@
             this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label20.Location = new System.Drawing.Point(396, 321);
+            this.label20.Location = new System.Drawing.Point(396, 348);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(392, 20);
             this.label20.TabIndex = 34;
@@ -325,7 +327,7 @@
             // 
             this.txtTaxaVeiculo.Location = new System.Drawing.Point(539, 371);
             this.txtTaxaVeiculo.Name = "txtTaxaVeiculo";
-            this.txtTaxaVeiculo.Size = new System.Drawing.Size(110, 20);
+            this.txtTaxaVeiculo.Size = new System.Drawing.Size(56, 20);
             this.txtTaxaVeiculo.TabIndex = 40;
             // 
             // label22
@@ -340,7 +342,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(495, 296);
+            this.label23.Location = new System.Drawing.Point(495, 318);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(0, 13);
             this.label23.TabIndex = 37;
@@ -348,7 +350,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(495, 270);
+            this.label24.Location = new System.Drawing.Point(495, 292);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(44, 13);
             this.label24.TabIndex = 35;
@@ -378,7 +380,7 @@
             "Cheio",
             "Médio",
             "Vazio"});
-            this.cbTanqueVeiculo.Location = new System.Drawing.Point(539, 267);
+            this.cbTanqueVeiculo.Location = new System.Drawing.Point(539, 289);
             this.cbTanqueVeiculo.Name = "cbTanqueVeiculo";
             this.cbTanqueVeiculo.Size = new System.Drawing.Size(201, 21);
             this.cbTanqueVeiculo.TabIndex = 45;
@@ -391,14 +393,14 @@
             "Disponivel",
             "Indisponivel",
             "Alugado"});
-            this.cbSituacaoVeiculo.Location = new System.Drawing.Point(539, 296);
+            this.cbSituacaoVeiculo.Location = new System.Drawing.Point(539, 318);
             this.cbSituacaoVeiculo.Name = "cbSituacaoVeiculo";
             this.cbSituacaoVeiculo.Size = new System.Drawing.Size(201, 21);
             this.cbSituacaoVeiculo.TabIndex = 46;
             // 
             // btnGerarContrato
             // 
-            this.btnGerarContrato.Location = new System.Drawing.Point(396, 414);
+            this.btnGerarContrato.Location = new System.Drawing.Point(396, 397);
             this.btnGerarContrato.Name = "btnGerarContrato";
             this.btnGerarContrato.Size = new System.Drawing.Size(392, 27);
             this.btnGerarContrato.TabIndex = 47;
@@ -418,12 +420,13 @@
             // 
             // btnCalcularTotal
             // 
-            this.btnCalcularTotal.Location = new System.Drawing.Point(656, 372);
+            this.btnCalcularTotal.Location = new System.Drawing.Point(601, 369);
             this.btnCalcularTotal.Name = "btnCalcularTotal";
-            this.btnCalcularTotal.Size = new System.Drawing.Size(132, 23);
+            this.btnCalcularTotal.Size = new System.Drawing.Size(87, 23);
             this.btnCalcularTotal.TabIndex = 49;
             this.btnCalcularTotal.Text = "Calcular Total";
             this.btnCalcularTotal.UseVisualStyleBackColor = true;
+            this.btnCalcularTotal.Click += new System.EventHandler(this.btnCalcularTotal_Click);
             // 
             // label26
             // 
@@ -440,6 +443,7 @@
             this.dtpLocacao.Name = "dtpLocacao";
             this.dtpLocacao.Size = new System.Drawing.Size(201, 20);
             this.dtpLocacao.TabIndex = 52;
+            this.dtpLocacao.ValueChanged += new System.EventHandler(this.dtpLocacao_ValueChanged);
             // 
             // label27
             // 
@@ -456,6 +460,7 @@
             this.dtpDevolucao.Name = "dtpDevolucao";
             this.dtpDevolucao.Size = new System.Drawing.Size(201, 20);
             this.dtpDevolucao.TabIndex = 106;
+            this.dtpDevolucao.ValueChanged += new System.EventHandler(this.dtpLocacao_ValueChanged);
             // 
             // label28
             // 
@@ -487,7 +492,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(489, 296);
+            this.label29.Location = new System.Drawing.Point(489, 318);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(49, 13);
             this.label29.TabIndex = 107;
@@ -625,21 +630,21 @@
             this.process1.SynchronizingObject = this;
             this.process1.Exited += new System.EventHandler(this.process1_Exited);
             // 
-            // txtCodCategoria
+            // txtDias
             // 
-            this.txtCodCategoria.Location = new System.Drawing.Point(539, 345);
-            this.txtCodCategoria.Name = "txtCodCategoria";
-            this.txtCodCategoria.Size = new System.Drawing.Size(110, 20);
-            this.txtCodCategoria.TabIndex = 116;
+            this.txtDias.Location = new System.Drawing.Point(539, 263);
+            this.txtDias.Name = "txtDias";
+            this.txtDias.Size = new System.Drawing.Size(110, 20);
+            this.txtDias.TabIndex = 116;
             // 
-            // label11
+            // lblDias
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(446, 348);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 13);
-            this.label11.TabIndex = 117;
-            this.label11.Text = "Categoria código";
+            this.lblDias.AutoSize = true;
+            this.lblDias.Location = new System.Drawing.Point(505, 266);
+            this.lblDias.Name = "lblDias";
+            this.lblDias.Size = new System.Drawing.Size(28, 13);
+            this.lblDias.TabIndex = 117;
+            this.lblDias.Text = "Dias";
             // 
             // cbCategoriaCarro
             // 
@@ -649,19 +654,37 @@
             "Cheio",
             "Médio",
             "Vazio"});
-            this.cbCategoriaCarro.Location = new System.Drawing.Point(541, 165);
+            this.cbCategoriaCarro.Location = new System.Drawing.Point(632, 165);
             this.cbCategoriaCarro.Name = "cbCategoriaCarro";
-            this.cbCategoriaCarro.Size = new System.Drawing.Size(201, 21);
+            this.cbCategoriaCarro.Size = new System.Drawing.Size(108, 21);
             this.cbCategoriaCarro.TabIndex = 118;
+            // 
+            // txtCodCategoria
+            // 
+            this.txtCodCategoria.Location = new System.Drawing.Point(539, 165);
+            this.txtCodCategoria.Name = "txtCodCategoria";
+            this.txtCodCategoria.Size = new System.Drawing.Size(85, 20);
+            this.txtCodCategoria.TabIndex = 119;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(710, 374);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(28, 13);
+            this.lblTotal.TabIndex = 120;
+            this.lblTotal.Text = "0,00";
             // 
             // frmLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbCategoriaCarro);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtCodCategoria);
+            this.Controls.Add(this.cbCategoriaCarro);
+            this.Controls.Add(this.lblDias);
+            this.Controls.Add(this.txtDias);
             this.Controls.Add(this.cbEstadoCliente);
             this.Controls.Add(this.txtCepCliente);
             this.Controls.Add(this.txtTelefoneCliente);
@@ -785,8 +808,10 @@
         private System.Windows.Forms.MaskedTextBox txtCepCliente;
         private System.Windows.Forms.ComboBox cbEstadoCliente;
         private System.Diagnostics.Process process1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtCodCategoria;
+        private System.Windows.Forms.Label lblDias;
+        private System.Windows.Forms.TextBox txtDias;
         private System.Windows.Forms.ComboBox cbCategoriaCarro;
+        private System.Windows.Forms.TextBox txtCodCategoria;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

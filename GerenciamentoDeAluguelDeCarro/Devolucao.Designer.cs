@@ -108,11 +108,11 @@
             // 
             // btnCalcularTotal
             // 
-            this.btnCalcularTotal.Location = new System.Drawing.Point(650, 348);
+            this.btnCalcularTotal.Location = new System.Drawing.Point(650, 347);
             this.btnCalcularTotal.Name = "btnCalcularTotal";
-            this.btnCalcularTotal.Size = new System.Drawing.Size(132, 23);
+            this.btnCalcularTotal.Size = new System.Drawing.Size(132, 52);
             this.btnCalcularTotal.TabIndex = 100;
-            this.btnCalcularTotal.Text = "Calcular Total";
+            this.btnCalcularTotal.Text = "Calcular Valores Adicionais";
             this.btnCalcularTotal.UseVisualStyleBackColor = true;
             this.btnCalcularTotal.Click += new System.EventHandler(this.btnCalcularTotal_Click);
             // 
