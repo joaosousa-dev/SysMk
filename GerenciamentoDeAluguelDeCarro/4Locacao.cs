@@ -46,8 +46,6 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnGerarContrato_Click(object sender, EventArgs e)
         {
-            frmPagamento frm = new frmPagamento();
-            frm.Show();
                 if (txtCodigoFuncionario.Text == string.Empty || txtCodigoVeiculo.Text == string.Empty || txtCodCliente.Text == string.Empty)
                 {
                     MessageBox.Show("Preencha todos os códigos", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -77,6 +75,8 @@ namespace GerenciamentoDeAluguelDeCarro
                     MessageBox.Show("Veiculo alugado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     doc.Close();
                     con.Close();
+                    frmPagamento frm = new frmPagamento();
+                    frm.Show();
                 }
                 catch (Exception ex)
                 {
@@ -315,16 +315,23 @@ namespace GerenciamentoDeAluguelDeCarro
         }
         private void btnCalcularTotal_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter da;
-            da = new SqlDataAdapter("SELECT * FROM categoria WHERE cod_categoria="+txtCodCategoria.Text,con);
-            DataTable dt =new DataTable();
-            da.Fill(dt);
-            txtTaxaVeiculo.Text = dt.Rows[0]["preco"].ToString();
-            int dias;
-            dias = int.Parse(txtDias.Text);
-            float preco;
-            preco = float.Parse(txtTaxaVeiculo.Text);
-            lblTotal.Text = (dias * preco).ToString() + " R$";
+            if (txtCodCategoria.Text != string.Empty)
+            {
+                SqlDataAdapter da;
+                da = new SqlDataAdapter("SELECT * FROM categoria WHERE cod_categoria=" + txtCodCategoria.Text, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                txtTaxaVeiculo.Text = dt.Rows[0]["preco"].ToString();
+                int dias;
+                dias = int.Parse(txtDias.Text);
+                float preco;
+                preco = float.Parse(txtTaxaVeiculo.Text);
+                lblTotal.Text = (dias * preco).ToString() + " R$";
+            }
+            else
+            {
+                MessageBox.Show("Preencha a categoria do veiculo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dtpLocacao_ValueChanged(object sender, EventArgs e)
@@ -334,7 +341,7 @@ namespace GerenciamentoDeAluguelDeCarro
             int dias;
 
             TimeSpan Dias=dataDevolucao-dataLocacao;
-             dias = Dias.Days;
+             dias = Dias.Days+1;
             if (dias == 0)
             {
                 dias = 1;

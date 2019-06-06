@@ -51,3 +51,6 @@ D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAlugue
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\bin\Debug\itextsharp.xml
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmCadastrarUsuario.resources
 D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.frmConsultaLocacao.resources
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk-master\GerenciamentoDeAluguelDeCarro\bin\Debug\GerenciamentoDeAluguelDeCarro.exe.config
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk-master\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.exe
+D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk-master\GerenciamentoDeAluguelDeCarro\obj\Debug\GerenciamentoDeAluguelDeCarro.pdb
