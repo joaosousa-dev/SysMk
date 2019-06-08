@@ -328,7 +328,7 @@
             // txtTaxaVeiculo
             // 
             this.txtTaxaVeiculo.Enabled = false;
-            this.txtTaxaVeiculo.Location = new System.Drawing.Point(1063, 178);
+            this.txtTaxaVeiculo.Location = new System.Drawing.Point(1146, 178);
             this.txtTaxaVeiculo.Name = "txtTaxaVeiculo";
             this.txtTaxaVeiculo.Size = new System.Drawing.Size(56, 20);
             this.txtTaxaVeiculo.TabIndex = 40;
@@ -336,7 +336,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(952, 181);
+            this.label22.Location = new System.Drawing.Point(1035, 181);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(108, 13);
             this.label22.TabIndex = 39;
@@ -391,6 +391,7 @@
             // cbSituacaoVeiculo
             // 
             this.cbSituacaoVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSituacaoVeiculo.Enabled = false;
             this.cbSituacaoVeiculo.FormattingEnabled = true;
             this.cbSituacaoVeiculo.Items.AddRange(new object[] {
             "Disponivel",
@@ -403,6 +404,7 @@
             // 
             // btnGerarContrato
             // 
+            this.btnGerarContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarContrato.Location = new System.Drawing.Point(920, 407);
             this.btnGerarContrato.Name = "btnGerarContrato";
             this.btnGerarContrato.Size = new System.Drawing.Size(392, 58);
@@ -423,7 +425,8 @@
             // 
             // btnCalcularTotal
             // 
-            this.btnCalcularTotal.Location = new System.Drawing.Point(1125, 162);
+            this.btnCalcularTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcularTotal.Location = new System.Drawing.Point(1027, 204);
             this.btnCalcularTotal.Name = "btnCalcularTotal";
             this.btnCalcularTotal.Size = new System.Drawing.Size(187, 37);
             this.btnCalcularTotal.TabIndex = 49;

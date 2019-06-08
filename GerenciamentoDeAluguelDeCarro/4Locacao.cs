@@ -50,18 +50,20 @@ namespace GerenciamentoDeAluguelDeCarro
                 {
                     MessageBox.Show("Preencha todos os códigos", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                else
-                {
+            if (cbSituacaoVeiculo.Text == "Alugado")
+                MessageBox.Show("Veiculo Já se encontra alugado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
                 try
                 {
                     con.Open();
-                    comando.CommandText = "INSERT INTO locacao(cod_cliente,nome_cliente,cod_fun,nome_fun,cod_veiculo,modelo_veiculo,data_aluguel,data_devolucao,situacao)VALUES('" + txtCodCliente.Text + "','" + txtNomeCliente.Text + "','" + txtCodigoFuncionario.Text + "','" + txtNomeFuncionario.Text + "','" + txtCodigoVeiculo.Text + "','" + txtModeloVeiculo.Text + "','" + dtpLocacao.Value.Date.ToString("dd/MM/yyyy") + "','" + dtpDevolucao.Value.Date.ToString("dd/MM/yyyy") + "','Em aberto')";
+                    comando.CommandText = "INSERT INTO locacao(cod_cliente,nome_cliente,cod_fun,nome_fun,cod_veiculo,modelo_veiculo,data_aluguel,data_devolucao,situacao,situacao_pagamento)VALUES('" + txtCodCliente.Text + "','" + txtNomeCliente.Text + "','" + txtCodigoFuncionario.Text + "','" + txtNomeFuncionario.Text + "','" + txtCodigoVeiculo.Text + "','" + txtModeloVeiculo.Text + "','" + dtpLocacao.Value.Date.ToString("dd/MM/yyyy") + "','" + dtpDevolucao.Value.Date.ToString("dd/MM/yyyy") + "','Em aberto','Não Pago')";
                     comando.ExecuteNonQuery();
 
                     comando.CommandText = "UPDATE veiculo SET tanque='" + cbTanqueVeiculo.Text + "' WHERE cod_veiculo='" + txtCodigoVeiculo.Text + "'";
                     comando.ExecuteNonQuery();
 
-                    comando.CommandText = "UPDATE veiculo SET situacao='" + cbSituacaoVeiculo.Text + "',odometro='"+txtOdometroVeiculo.Text+"' WHERE cod_veiculo='" + txtCodigoVeiculo.Text + "'";
+                    comando.CommandText = "UPDATE veiculo SET situacao='Alugado',odometro='" + txtOdometroVeiculo.Text + "' WHERE cod_veiculo='" + txtCodigoVeiculo.Text + "'";
                     comando.ExecuteNonQuery();
 
                     Document doc = new Document(PageSize.A4);
@@ -70,7 +72,7 @@ namespace GerenciamentoDeAluguelDeCarro
                     string caminho = @"D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\Contratos\" + "CONTRATO" + txtCodCliente.Text + ".pdf";
                     PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
                     doc.Open();
-                    Paragraph paragrafo = new Paragraph("    Eu, " + txtNomeCliente.Text + ", Cnh: " + txtCnhCliente.Text + ",Inscrito no CPF: ___.___.___-__ E RG______________ residente e domiciliado(a) à " + txtEnderecoCliente.Text + ", na cidade de " + txtCidadeCliente.Text + " - " + cbEstadoCliente.Text + ",por meio deste instrumento declaro me responsabilizar pela conservação de um Veiculo " + txtMarcaVeiculo.Text + "," + txtModeloVeiculo.Text + "," + txtAnoVeiculo.Text + ".\n    Me comprometo a devolver o mencionado bem em perfeito estado de conservação, como atualmente se encontra, ao fim do prazo estabelecido\n.   E me comprometo a pagar o devido valor de : "+lblTotal.Text+"\n    Em caso de extravio ou danos que provoquem a perda total ou parcial do bem, fico obrigado a ressarcir o proprietário dos prejuízos ocasionados.\n\n\n" + dtpLocacao.Text + "\n\nAssinatura:\n_____________________________________\n\n\n\nAtesto que o bem foi devolvido em " + dtpDevolucao.Text + ", Nas seguintes condições: \n\n(_)Perfeito Estado\n(_)Com Defeitos\n(_)Faltando peças /acessórios\n");
+                    Paragraph paragrafo = new Paragraph("    Eu, " + txtNomeCliente.Text + ", Cnh: " + txtCnhCliente.Text + ",Inscrito no CPF: ___.___.___-__ E RG______________ residente e domiciliado(a) à " + txtEnderecoCliente.Text + ", na cidade de " + txtCidadeCliente.Text + " - " + cbEstadoCliente.Text + ",por meio deste instrumento declaro me responsabilizar pela conservação de um Veiculo " + txtMarcaVeiculo.Text + "," + txtModeloVeiculo.Text + "," + txtAnoVeiculo.Text + ".\n    Me comprometo a devolver o mencionado bem em perfeito estado de conservação, como atualmente se encontra, ao fim do prazo estabelecido\n.   E me comprometo a pagar o devido valor de : " + lblTotal.Text + "\n    Em caso de extravio ou danos que provoquem a perda total ou parcial do bem, fico obrigado a ressarcir o proprietário dos prejuízos ocasionados.\n\n\n" + dtpLocacao.Text + "\n\nAssinatura:\n_____________________________________\n\n\n\nAtesto que o bem foi devolvido em " + dtpDevolucao.Text + ", Nas seguintes condições: \n\n(_)Perfeito Estado\n(_)Com Defeitos\n(_)Faltando peças /acessórios\n");
                     doc.Add(paragrafo);
                     MessageBox.Show("Veiculo alugado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     doc.Close();
@@ -315,22 +317,32 @@ namespace GerenciamentoDeAluguelDeCarro
         }
         private void btnCalcularTotal_Click(object sender, EventArgs e)
         {
-            if (txtCodCategoria.Text != string.Empty)
+            try
             {
-                SqlDataAdapter da;
-                da = new SqlDataAdapter("SELECT * FROM categoria WHERE cod_categoria=" + txtCodCategoria.Text, con);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                txtTaxaVeiculo.Text = dt.Rows[0]["preco"].ToString();
-                int dias;
-                dias = int.Parse(txtDias.Text);
-                float preco;
-                preco = float.Parse(txtTaxaVeiculo.Text);
-                lblTotal.Text = (dias * preco).ToString() + " R$";
+                if (txtCodCategoria.Text != string.Empty)
+                {
+                    SqlDataAdapter da;
+                    da = new SqlDataAdapter("SELECT * FROM categoria WHERE cod_categoria=" + txtCodCategoria.Text, con);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    txtTaxaVeiculo.Text = dt.Rows[0]["preco"].ToString();
+                    int dias;
+                    dias = int.Parse(txtDias.Text);
+                    float preco;
+                    preco = float.Parse(txtTaxaVeiculo.Text);
+                    lblTotal.Text = (dias * preco).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Preencha a categoria do veiculo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+            finally
             {
-                MessageBox.Show("Preencha a categoria do veiculo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                con.Close();
             }
         }
 

@@ -80,23 +80,34 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text != string.Empty || txtNome.Text != string.Empty)
+            try
             {
-                if (MessageBox.Show("Deseja excluir ?", "Confirmação ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (txtNome.Text != string.Empty || txtNome.Text != string.Empty)
                 {
-                    con.Open();
-                    comando.CommandText = "DELETE FROM categoria WHERE nome='" + txtNome.Text + "'AND preco='" + txtPreco.Text + "'";
-                    comando.ExecuteNonQuery();
-                    carregarDgvCategoria(dgvCategoria);
-                    txtNome.Clear();
-                    txtPreco.Clear();
-                    con.Close();
+                    if (MessageBox.Show("Deseja excluir ?", "Confirmação ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        con.Open();
+                        comando.CommandText = "DELETE FROM categoria WHERE nome='" + txtNome.Text + "'AND preco='" + txtPreco.Text + "'";
+                        comando.ExecuteNonQuery();
+                        carregarDgvCategoria(dgvCategoria);
+                        txtNome.Clear();
+                        txtPreco.Clear();
+                        con.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Preencha todos os campos vazios para excluir", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Preencha todos os campos vazios para excluir", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show(ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
             }
         }
 

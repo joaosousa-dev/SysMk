@@ -75,10 +75,10 @@
             // 
             // btnCadastrarNovoVeiculo
             // 
-            this.btnCadastrarNovoVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarNovoVeiculo.Location = new System.Drawing.Point(1078, 468);
+            this.btnCadastrarNovoVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarNovoVeiculo.Location = new System.Drawing.Point(1058, 468);
             this.btnCadastrarNovoVeiculo.Name = "btnCadastrarNovoVeiculo";
-            this.btnCadastrarNovoVeiculo.Size = new System.Drawing.Size(194, 46);
+            this.btnCadastrarNovoVeiculo.Size = new System.Drawing.Size(214, 46);
             this.btnCadastrarNovoVeiculo.TabIndex = 3;
             this.btnCadastrarNovoVeiculo.Text = "Cadastrar Novo Veiculo";
             this.btnCadastrarNovoVeiculo.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             // 
             // btnAtualizarVeiculos
             // 
-            this.btnAtualizarVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizarVeiculos.Location = new System.Drawing.Point(113, 468);
             this.btnAtualizarVeiculos.Name = "btnAtualizarVeiculos";
             this.btnAtualizarVeiculos.Size = new System.Drawing.Size(194, 46);
@@ -97,7 +97,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Location = new System.Drawing.Point(598, 468);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(194, 46);
@@ -125,7 +125,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.Location = new System.Drawing.Point(819, 219);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(194, 23);

@@ -69,23 +69,34 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (txtCod.Text == string.Empty)
+            try
             {
-                MessageBox.Show("Preencha o campo Código para excluir!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                if (MessageBox.Show("Deseja excluir ?", "Confirmação ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (txtCod.Text == string.Empty)
                 {
-                    con.Open();
-                    comando.CommandText = "DELETE FROM veiculo WHERE cod_veiculo='" + txtCod.Text + "'";
-                    comando.ExecuteNonQuery();
-                    carregarCarros(dgvCarros);
-                    dgvCarros.Refresh();
-                    txtCod.Clear();
-                    MessageBox.Show("Veículo excluido!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    con.Close();
+                    MessageBox.Show("Preencha o campo Código para excluir!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+                else
+                {
+                    if (MessageBox.Show("Deseja excluir ?", "Confirmação ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        con.Open();
+                        comando.CommandText = "DELETE FROM veiculo WHERE cod_veiculo='" + txtCod.Text + "'";
+                        comando.ExecuteNonQuery();
+                        carregarCarros(dgvCarros);
+                        dgvCarros.Refresh();
+                        txtCod.Clear();
+                        MessageBox.Show("Veículo excluido!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        con.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
             }
         }
 

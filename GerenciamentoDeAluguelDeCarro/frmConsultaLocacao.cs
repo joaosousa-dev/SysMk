@@ -44,5 +44,16 @@ namespace GerenciamentoDeAluguelDeCarro
                 MessageBox.Show(ex.Message, "erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNovaLocacao_Click(object sender, EventArgs e)
+        {
+            frmLocacao frm = new frmLocacao();
+            frm.Show(); 
+        }
     }
 }

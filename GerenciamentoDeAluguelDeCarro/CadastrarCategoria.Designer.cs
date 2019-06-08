@@ -42,9 +42,10 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(154, 292);
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(476, 639);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(124, 41);
+            this.btnCadastrar.Size = new System.Drawing.Size(149, 61);
             this.btnCadastrar.TabIndex = 27;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -52,7 +53,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(212, 68);
+            this.txtNome.Location = new System.Drawing.Point(576, 77);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(117, 20);
             this.txtNome.TabIndex = 28;
@@ -60,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(109, 71);
+            this.label2.Location = new System.Drawing.Point(473, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 29;
@@ -69,10 +70,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 9);
+            this.label1.Font = new System.Drawing.Font("Square721 BT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(470, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 29);
+            this.label1.Size = new System.Drawing.Size(362, 32);
             this.label1.TabIndex = 30;
             this.label1.Text = "CADASTRAR CATEGORIA";
             // 
@@ -81,18 +82,19 @@
             this.dgvCategoria.AllowUserToAddRows = false;
             this.dgvCategoria.AllowUserToDeleteRows = false;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategoria.Location = new System.Drawing.Point(135, 94);
+            this.dgvCategoria.Location = new System.Drawing.Point(476, 107);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.ReadOnly = true;
-            this.dgvCategoria.Size = new System.Drawing.Size(345, 184);
+            this.dgvCategoria.Size = new System.Drawing.Size(345, 493);
             this.dgvCategoria.TabIndex = 31;
             this.dgvCategoria.SelectionChanged += new System.EventHandler(this.dgvCategoria_SelectionChanged);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(338, 292);
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(672, 639);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(124, 41);
+            this.btnExcluir.Size = new System.Drawing.Size(149, 61);
             this.btnExcluir.TabIndex = 32;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -101,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 71);
+            this.label3.Location = new System.Drawing.Point(699, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 33;
@@ -109,7 +111,7 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(379, 68);
+            this.txtPreco.Location = new System.Drawing.Point(743, 77);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(65, 20);
             this.txtPreco.TabIndex = 34;
@@ -120,7 +122,7 @@
             this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
             this.btnVoltar.Location = new System.Drawing.Point(12, 12);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
+            this.btnVoltar.Size = new System.Drawing.Size(175, 61);
             this.btnVoltar.TabIndex = 35;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -129,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 345);
+            this.ClientSize = new System.Drawing.Size(1370, 712);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.label3);
@@ -143,6 +145,7 @@
             this.Name = "frmCadastrarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Categoria";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCadastrarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();
             this.ResumeLayout(false);

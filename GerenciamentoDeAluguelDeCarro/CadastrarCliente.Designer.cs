@@ -52,12 +52,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCepCliente = new System.Windows.Forms.MaskedTextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbEstadoCliente
             // 
             this.cbEstadoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstadoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstadoCliente.FormattingEnabled = true;
             this.cbEstadoCliente.Items.AddRange(new object[] {
             "AC",
@@ -87,99 +91,110 @@
             "SP",
             "SE",
             "TO"});
-            this.cbEstadoCliente.Location = new System.Drawing.Point(248, 217);
+            this.cbEstadoCliente.Location = new System.Drawing.Point(586, 424);
             this.cbEstadoCliente.Name = "cbEstadoCliente";
-            this.cbEstadoCliente.Size = new System.Drawing.Size(58, 21);
+            this.cbEstadoCliente.Size = new System.Drawing.Size(58, 28);
             this.cbEstadoCliente.TabIndex = 42;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(204, 221);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(516, 428);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 13);
+            this.label14.Size = new System.Drawing.Size(64, 20);
             this.label14.TabIndex = 41;
             this.label14.Text = "Estado:";
             // 
             // txtCidadeCliente
             // 
-            this.txtCidadeCliente.Location = new System.Drawing.Point(105, 218);
+            this.txtCidadeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidadeCliente.Location = new System.Drawing.Point(410, 426);
             this.txtCidadeCliente.Name = "txtCidadeCliente";
-            this.txtCidadeCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtCidadeCliente.Size = new System.Drawing.Size(100, 26);
             this.txtCidadeCliente.TabIndex = 40;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(61, 221);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(341, 428);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 13);
+            this.label13.Size = new System.Drawing.Size(63, 20);
             this.label13.TabIndex = 39;
             this.label13.Text = "Cidade:";
             // 
             // txtComplementoCliente
             // 
-            this.txtComplementoCliente.Location = new System.Drawing.Point(105, 166);
+            this.txtComplementoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplementoCliente.Location = new System.Drawing.Point(410, 362);
             this.txtComplementoCliente.Name = "txtComplementoCliente";
-            this.txtComplementoCliente.Size = new System.Drawing.Size(83, 20);
+            this.txtComplementoCliente.Size = new System.Drawing.Size(83, 26);
             this.txtComplementoCliente.TabIndex = 38;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(36, 169);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(292, 365);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 13);
+            this.label12.Size = new System.Drawing.Size(112, 20);
             this.label12.TabIndex = 37;
             this.label12.Text = "Complemento:";
             // 
             // txtNumeroCliente
             // 
-            this.txtNumeroCliente.Location = new System.Drawing.Point(223, 166);
+            this.txtNumeroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroCliente.Location = new System.Drawing.Point(528, 362);
             this.txtNumeroCliente.Name = "txtNumeroCliente";
-            this.txtNumeroCliente.Size = new System.Drawing.Size(83, 20);
+            this.txtNumeroCliente.Size = new System.Drawing.Size(95, 26);
             this.txtNumeroCliente.TabIndex = 36;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(194, 169);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(499, 365);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(22, 13);
+            this.label11.Size = new System.Drawing.Size(29, 20);
             this.label11.TabIndex = 35;
             this.label11.Text = "N°:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(68, 195);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(359, 397);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 13);
+            this.label10.Size = new System.Drawing.Size(45, 20);
             this.label10.TabIndex = 33;
             this.label10.Text = "CEP:";
             // 
             // txtEnderecoCliente
             // 
-            this.txtEnderecoCliente.Location = new System.Drawing.Point(105, 140);
+            this.txtEnderecoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnderecoCliente.Location = new System.Drawing.Point(410, 330);
             this.txtEnderecoCliente.Name = "txtEnderecoCliente";
-            this.txtEnderecoCliente.Size = new System.Drawing.Size(201, 20);
+            this.txtEnderecoCliente.Size = new System.Drawing.Size(213, 26);
             this.txtEnderecoCliente.TabIndex = 32;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 143);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(322, 335);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(82, 20);
             this.label5.TabIndex = 31;
             this.label5.Text = "Endereço:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(211, 117);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(516, 304);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 30;
             this.label4.Text = "Tipo:";
             // 
@@ -187,6 +202,7 @@
             // 
             this.cbTipoCnhCliente.AccessibleDescription = "";
             this.cbTipoCnhCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoCnhCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoCnhCliente.FormattingEnabled = true;
             this.cbTipoCnhCliente.Items.AddRange(new object[] {
             "A",
@@ -194,41 +210,45 @@
             "C",
             "D",
             "E"});
-            this.cbTipoCnhCliente.Location = new System.Drawing.Point(248, 114);
+            this.cbTipoCnhCliente.Location = new System.Drawing.Point(565, 298);
             this.cbTipoCnhCliente.Name = "cbTipoCnhCliente";
-            this.cbTipoCnhCliente.Size = new System.Drawing.Size(58, 21);
+            this.cbTipoCnhCliente.Size = new System.Drawing.Size(58, 28);
             this.cbTipoCnhCliente.TabIndex = 29;
             // 
             // txtCnhCliente
             // 
-            this.txtCnhCliente.Location = new System.Drawing.Point(105, 114);
+            this.txtCnhCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCnhCliente.Location = new System.Drawing.Point(410, 298);
             this.txtCnhCliente.MaxLength = 11;
             this.txtCnhCliente.Name = "txtCnhCliente";
-            this.txtCnhCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtCnhCliente.Size = new System.Drawing.Size(100, 26);
             this.txtCnhCliente.TabIndex = 28;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 117);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(357, 301);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(47, 20);
             this.label3.TabIndex = 27;
             this.label3.Text = "CNH:";
             // 
             // txtNomeCliente
             // 
-            this.txtNomeCliente.Location = new System.Drawing.Point(105, 62);
+            this.txtNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeCliente.Location = new System.Drawing.Point(410, 241);
             this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(201, 20);
+            this.txtNomeCliente.Size = new System.Drawing.Size(213, 26);
             this.txtNomeCliente.TabIndex = 26;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 65);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(349, 244);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nome:";
             // 
@@ -238,7 +258,7 @@
             this.clientesCadastradosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(400, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 44;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -251,9 +271,10 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(140, 267);
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(565, 596);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(124, 41);
+            this.btnCadastrar.Size = new System.Drawing.Size(213, 69);
             this.btnCadastrar.TabIndex = 45;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -261,27 +282,30 @@
             // 
             // txtTelefoneCliente
             // 
-            this.txtTelefoneCliente.Location = new System.Drawing.Point(105, 88);
+            this.txtTelefoneCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefoneCliente.Location = new System.Drawing.Point(410, 270);
             this.txtTelefoneCliente.Mask = "(99)9999-9999";
             this.txtTelefoneCliente.Name = "txtTelefoneCliente";
-            this.txtTelefoneCliente.Size = new System.Drawing.Size(201, 20);
+            this.txtTelefoneCliente.Size = new System.Drawing.Size(213, 26);
             this.txtTelefoneCliente.TabIndex = 47;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 91);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(329, 273);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 48;
             this.label1.Text = "Telefone:";
             // 
             // txtCepCliente
             // 
-            this.txtCepCliente.Location = new System.Drawing.Point(105, 192);
+            this.txtCepCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCepCliente.Location = new System.Drawing.Point(410, 394);
             this.txtCepCliente.Mask = "99999-999";
             this.txtCepCliente.Name = "txtCepCliente";
-            this.txtCepCliente.Size = new System.Drawing.Size(201, 20);
+            this.txtCepCliente.Size = new System.Drawing.Size(100, 26);
             this.txtCepCliente.TabIndex = 49;
             // 
             // btnVoltar
@@ -290,16 +314,37 @@
             this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
             this.btnVoltar.Location = new System.Drawing.Point(12, 27);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(81, 29);
+            this.btnVoltar.Size = new System.Drawing.Size(175, 61);
             this.btnVoltar.TabIndex = 50;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.clipboard;
+            this.pictureBox1.Location = new System.Drawing.Point(748, 212);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 268);
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Square721 BT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(709, 180);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(302, 29);
+            this.label6.TabIndex = 52;
+            this.label6.Text = "CADASTRAR CLIENTES";
             // 
             // frmCadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 320);
+            this.ClientSize = new System.Drawing.Size(1370, 712);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtCepCliente);
             this.Controls.Add(this.label1);
@@ -328,8 +373,10 @@
             this.Name = "frmCadastrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Cliente";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +408,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtCepCliente;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
