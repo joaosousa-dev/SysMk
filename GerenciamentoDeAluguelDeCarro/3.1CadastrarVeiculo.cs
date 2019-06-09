@@ -23,29 +23,37 @@ namespace GerenciamentoDeAluguelDeCarro
         }
         private void btnCadastrarCarro_Click(object sender, EventArgs e)
         {
-            if (txtAnoCarro.Text == String.Empty || txtMarcaCarro.Text == String.Empty || txtModeloCarro.Text == String.Empty || txtPlacaCarro.Text == String.Empty || cbCategoriaCarro.Text == String.Empty)
+            con.Open();
+            try
             {
-                MessageBox.Show("Preencha todos os campos vazios", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (txtAnoCarro.Text == String.Empty || txtMarcaCarro.Text == String.Empty || txtModeloCarro.Text == String.Empty || txtPlacaCarro.Text == String.Empty || cbCategoriaCarro.Text == String.Empty)
+                {
+                    MessageBox.Show("Preencha todos os campos vazios", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else
+                {
+                    //                comando.CommandText = "INSERT INTO veiculo (marca,modelo,ano,categoria,odometro,estado,placa,situacao) VALUES ('"+txtMarcaCarro.Text+"','"+txtModeloCarro.Text+"','"+int.Parse(txtAnoCarro.Text)+"','"+cbCategoriaCarro.Text+"','"+int.Parse(txtOdometroCarro.Text)+"','"+cbEstadoCarro.Text+"','"+txtPlacaCarro.Text+"','"+cbSituacao.Text+"')";
+                    comando.CommandText = "INSERT INTO veiculo (marca,modelo,ano,cod_categoria,odometro,estado,placa,situacao,categoria) VALUES ('" + txtMarcaCarro.Text + "','" + txtModeloCarro.Text + "','" + int.Parse(txtAnoCarro.Text) + "','" + txtCodCategoria.Text + "','" + int.Parse(txtOdometroCarro.Text) + "','" + cbEstadoCarro.Text + "','" + txtPlacaCarro.Text + "','" + cbSituacao.Text + "','" + cbCategoriaCarro.Text + "')";
+                    comando.ExecuteNonQuery();
+                    txtAnoCarro.Clear();
+                    txtMarcaCarro.Clear();
+                    txtModeloCarro.Clear();
+                    txtOdometroCarro.Clear();
+                    txtPlacaCarro.Clear();
+                    txtCodCategoria.Clear();
+                    cbEstadoCarro.ResetText();
+                    cbSituacao.ResetText();
+                    MessageBox.Show("Carro Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    con.Close();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-
-            else
-
+            finally
             {
-                con.Open();
-                //                comando.CommandText = "INSERT INTO veiculo (marca,modelo,ano,categoria,odometro,estado,placa,situacao) VALUES ('"+txtMarcaCarro.Text+"','"+txtModeloCarro.Text+"','"+int.Parse(txtAnoCarro.Text)+"','"+cbCategoriaCarro.Text+"','"+int.Parse(txtOdometroCarro.Text)+"','"+cbEstadoCarro.Text+"','"+txtPlacaCarro.Text+"','"+cbSituacao.Text+"')";
-                comando.CommandText = "INSERT INTO veiculo (marca,modelo,ano,cod_categoria,odometro,estado,placa,situacao,categoria) VALUES ('" + txtMarcaCarro.Text + "','" + txtModeloCarro.Text + "','" + int.Parse(txtAnoCarro.Text) + "','" + txtCodCategoria.Text + "','" + int.Parse(txtOdometroCarro.Text) + "','" + cbEstadoCarro.Text + "','" + txtPlacaCarro.Text + "','" + cbSituacao.Text + "','"+cbCategoriaCarro.Text+"')";
-                comando.ExecuteNonQuery();
-                txtAnoCarro.Clear();
-                txtMarcaCarro.Clear();
-                txtModeloCarro.Clear();
-                txtOdometroCarro.Clear();
-                txtPlacaCarro.Clear();
-                txtCodCategoria.Clear();
-                cbEstadoCarro.ResetText();
-                cbSituacao.ResetText();
-                MessageBox.Show("Carro Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
-                
             }
         }
 

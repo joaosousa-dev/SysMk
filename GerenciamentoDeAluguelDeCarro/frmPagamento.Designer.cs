@@ -39,6 +39,8 @@
             this.rbAvista = new System.Windows.Forms.RadioButton();
             this.rbCredito = new System.Windows.Forms.RadioButton();
             this.rbDebito = new System.Windows.Forms.RadioButton();
+            this.txtSituacaoPagamentoLocacao = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,16 +58,17 @@
             // txtCodLocacao
             // 
             this.txtCodLocacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodLocacao.Location = new System.Drawing.Point(659, 191);
+            this.txtCodLocacao.Location = new System.Drawing.Point(618, 191);
             this.txtCodLocacao.Name = "txtCodLocacao";
-            this.txtCodLocacao.Size = new System.Drawing.Size(152, 26);
+            this.txtCodLocacao.Size = new System.Drawing.Size(228, 26);
             this.txtCodLocacao.TabIndex = 2;
+            this.txtCodLocacao.TextChanged += new System.EventHandler(this.txtCodLocacao_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(529, 194);
+            this.label2.Location = new System.Drawing.Point(488, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 3;
@@ -156,11 +159,31 @@
             this.rbDebito.Text = "Débito";
             this.rbDebito.UseVisualStyleBackColor = true;
             // 
+            // txtSituacaoPagamentoLocacao
+            // 
+            this.txtSituacaoPagamentoLocacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSituacaoPagamentoLocacao.Location = new System.Drawing.Point(618, 223);
+            this.txtSituacaoPagamentoLocacao.Name = "txtSituacaoPagamentoLocacao";
+            this.txtSituacaoPagamentoLocacao.Size = new System.Drawing.Size(228, 26);
+            this.txtSituacaoPagamentoLocacao.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(475, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Situação Locação";
+            // 
             // frmPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 712);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtSituacaoPagamentoLocacao);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnPagamento);
@@ -195,5 +218,7 @@
         private System.Windows.Forms.RadioButton rbAvista;
         private System.Windows.Forms.RadioButton rbCredito;
         private System.Windows.Forms.RadioButton rbDebito;
+        private System.Windows.Forms.TextBox txtSituacaoPagamentoLocacao;
+        private System.Windows.Forms.Label label3;
     }
 }

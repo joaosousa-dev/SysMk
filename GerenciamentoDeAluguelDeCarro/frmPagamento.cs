@@ -15,7 +15,10 @@ namespace GerenciamentoDeAluguelDeCarro
     {
         SqlConnection con = new SqlConnection("Data Source = SOUSA-PC; Initial Catalog = LocacaoDeCarro; User ID = sa; Password=joaovictor");
         SqlCommand comando = new SqlCommand();
-        
+        SqlDataAdapter da;
+        SqlDataReader dr;
+        DataTable dt;
+
         public frmPagamento()
         {
             InitializeComponent();
@@ -29,7 +32,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void contratosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLocacao frm = new frmLocacao();
+            frmConsultaLocacao frm = new frmConsultaLocacao();
             frm.Show();
         }
 
@@ -44,34 +47,41 @@ namespace GerenciamentoDeAluguelDeCarro
                 }
                 else
                 {
-                    if (rbAvista.Checked)
-                    {
-                        comando.CommandText = "UPDATE locacao SET situacao_pagamento='Pago a Vista' WHERE cod_locacao='" + txtCodLocacao.Text + "'";
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Locação Paga!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbAvista.Checked = false;
-                        rbCredito.Checked = false;
-                        rbDebito.Checked = false;
-                    }
-                    else if (rbCredito.Checked)
-                    {
-                        comando.CommandText = "UPDATE locacao SET situacao_pagamento='Pago Com cartão de crédito' WHERE cod_locacao='" + txtCodLocacao.Text + "'";
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Locação Paga!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbAvista.Checked = false;
-                        rbCredito.Checked = false;
-                        rbDebito.Checked = false;
-                    }
+                    if (txtSituacaoPagamentoLocacao.Text == "Pago Com cartão de crédito" || txtSituacaoPagamentoLocacao.Text == "Pago Com cartão de débito" || txtSituacaoPagamentoLocacao.Text == "Pago a Vista")
+                        MessageBox.Show("Está locação ja está paga", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     else
                     {
-                        comando.CommandText = "UPDATE locacao SET situacao_pagamento='Pago Com cartão de crédito' WHERE cod_locacao='" + txtCodLocacao.Text + "'";
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Locação Paga!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbAvista.Checked = false;
-                        rbCredito.Checked = false;
-                        rbDebito.Checked = false;
-                    }
-                }
+                            if (rbAvista.Checked)
+                            {
+                                comando.CommandText = "UPDATE locacao SET situacao_pagamento='Pago a Vista' WHERE cod_locacao='" + txtCodLocacao.Text + "'";
+                                comando.ExecuteNonQuery();
+                                MessageBox.Show("Locação Paga!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                rbAvista.Checked = false;
+                                rbCredito.Checked = false;
+                                rbDebito.Checked = false;
+                            }
+                            else if (rbCredito.Checked)
+                            {
+                                comando.CommandText = "UPDATE locacao SET situacao_pagamento='Pago Com cartão de crédito' WHERE cod_locacao='" + txtCodLocacao.Text + "'";
+                                comando.ExecuteNonQuery();
+                                MessageBox.Show("Locação Paga!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                rbAvista.Checked = false;
+                                rbCredito.Checked = false;
+                                rbDebito.Checked = false;
+                            }
+                            else
+                            {
+                                comando.CommandText = "UPDATE locacao SET situacao_pagamento='Pago Com cartão de débito' WHERE cod_locacao='" + txtCodLocacao.Text + "'";
+                                comando.ExecuteNonQuery();
+                                MessageBox.Show("Locação Paga!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                rbAvista.Checked = false;
+                                rbCredito.Checked = false;
+                                rbDebito.Checked = false;
+                            }
+                        txtCodLocacao.Clear();
+                        txtSituacaoPagamentoLocacao.Clear();
+                        }
+                    }                                    
             }
             catch(Exception ex)
             {
@@ -82,5 +92,37 @@ namespace GerenciamentoDeAluguelDeCarro
                 con.Close();
             }
             }
+
+        private void txtCodLocacao_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtCodLocacao.Text != string.Empty)
+                {
+                    da = new SqlDataAdapter();
+                    dt = new DataTable();
+                    SqlDataReader dr;
+                    da = new SqlDataAdapter("SELECT * FROM locacao WHERE cod_locacao=" + txtCodLocacao.Text, con);
+                    da.Fill(dt);
+                    txtSituacaoPagamentoLocacao.Text = dt.Rows[0]["situacao_pagamento"].ToString();
+                    txtSituacaoPagamentoLocacao.Enabled = false;
+
+                }
+                else
+                {
+                    txtCodLocacao.Clear();
+                    txtSituacaoPagamentoLocacao.Clear();
+                    txtSituacaoPagamentoLocacao.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 }

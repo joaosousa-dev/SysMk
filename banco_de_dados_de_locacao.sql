@@ -60,7 +60,8 @@ cod_fun int,
 nome_fun varchar(80),
 data_aluguel date,
 data_devolucao date,
-situacao varchar(20)
+situacao varchar(20),
+situacao_pagamento varchar(50),
 foreign key(cod_cliente)references cliente (cod_cliente),
 foreign key (cod_veiculo) references veiculo (cod_veiculo),
 foreign key (cod_fun) references funcionario (cod_fun)
@@ -88,3 +89,7 @@ select * from locacao
 drop table categoria
 drop table veiculo
 drop table locacao
+drop table cliente
+drop table funcionario
+
+

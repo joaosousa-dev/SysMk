@@ -87,7 +87,7 @@ namespace GerenciamentoDeAluguelDeCarro
                     if (MessageBox.Show("Deseja excluir ?", "Confirmação ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         con.Open();
-                        comando.CommandText = "DELETE FROM categoria WHERE nome='" + txtNome.Text + "'AND preco='" + txtPreco.Text + "'";
+                        comando.CommandText = "DELETE FROM categoria WHERE nome='" + txtNome.Text + "'AND preco='" + float.Parse(txtPreco.Text) + "'";
                         comando.ExecuteNonQuery();
                         carregarDgvCategoria(dgvCategoria);
                         txtNome.Clear();

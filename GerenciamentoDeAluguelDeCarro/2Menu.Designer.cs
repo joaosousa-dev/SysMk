@@ -50,10 +50,10 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
             this.btnCategoriasDeVeiculos = new System.Windows.Forms.Button();
             this.btnPagamento = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
@@ -151,41 +151,41 @@
             this.locaçãoToolStripMenuItem});
             this.bToolStripMenuItem.Font = new System.Drawing.Font("Square721 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.bToolStripMenuItem.Text = "Consultar";
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.bToolStripMenuItem.Text = "Consultas";
             // 
             // carrosToolStripMenuItem
             // 
             this.carrosToolStripMenuItem.Name = "carrosToolStripMenuItem";
-            this.carrosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.carrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.carrosToolStripMenuItem.Text = "Veículos";
             this.carrosToolStripMenuItem.Click += new System.EventHandler(this.carrosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
             // locaçãoToolStripMenuItem
             // 
             this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
-            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.locaçãoToolStripMenuItem.Text = "Locação";
             this.locaçãoToolStripMenuItem.Click += new System.EventHandler(this.locaçãoToolStripMenuItem_Click);
             // 
@@ -254,6 +254,26 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.calendar;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.clock;
+            this.pictureBox1.Location = new System.Drawing.Point(1202, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
@@ -275,26 +295,6 @@
             this.lblData.Size = new System.Drawing.Size(96, 22);
             this.lblData.TabIndex = 0;
             this.lblData.Text = "dd/mm/aa";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.calendar;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.clock;
-            this.pictureBox1.Location = new System.Drawing.Point(1202, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCategoriasDeVeiculos
             // 

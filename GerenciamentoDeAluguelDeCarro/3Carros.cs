@@ -17,9 +17,7 @@ namespace GerenciamentoDeAluguelDeCarro
         SqlCommand comando = new SqlCommand();
         SqlDataAdapter da;
         SqlDataReader dr;
-        DataTable dt;
-
-       
+        DataTable dt;     
         public frmCarros()
         {
             InitializeComponent();
@@ -69,6 +67,7 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            con.Open();
             try
             {
                 if (txtCod.Text == string.Empty)
@@ -78,15 +77,13 @@ namespace GerenciamentoDeAluguelDeCarro
                 else
                 {
                     if (MessageBox.Show("Deseja excluir ?", "Confirmação ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        con.Open();
+                    {  
                         comando.CommandText = "DELETE FROM veiculo WHERE cod_veiculo='" + txtCod.Text + "'";
                         comando.ExecuteNonQuery();
                         carregarCarros(dgvCarros);
                         dgvCarros.Refresh();
                         txtCod.Clear();
-                        MessageBox.Show("Veículo excluido!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        con.Close();
+                        MessageBox.Show("Veículo excluido!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);                      
                     }
                 }
             }
@@ -114,23 +111,30 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-
-            if (txtCod.Text != string.Empty)
+             con.Open();
+            try
             {
-
-                con.Open();
-                da = new SqlDataAdapter("SELECT * FROM veiculo WHERE cod_veiculo=" + txtCod.Text, con);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgvCarros.DataSource = dt;
-                dgvCarros.Refresh();
-                txtCod.Clear();
-                MessageBox.Show("Lista Carregada!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                con.Close();
+                if (txtCod.Text != string.Empty)
+                {                   
+                    da = new SqlDataAdapter("SELECT * FROM veiculo WHERE cod_veiculo=" + txtCod.Text, con);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    dgvCarros.DataSource = dt;
+                    dgvCarros.Refresh();
+                    txtCod.Clear();
+                    MessageBox.Show("Lista Carregada!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Preencha o código do veículo!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-            else
+            finally
             {
-                MessageBox.Show("Preencha o código do veículo!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
             }
         }
 

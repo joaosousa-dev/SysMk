@@ -71,9 +71,11 @@ namespace GerenciamentoDeAluguelDeCarro
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            if (txtCod.Text != string.Empty)
+            con.Open();
+            try
             {
-                    con.Open();
+                if (txtCod.Text != string.Empty)
+                {                   
                     da = new SqlDataAdapter("SELECT * FROM cliente WHERE cod_cliente=" + txtCod.Text, con);
                     dt = new DataTable();
                     da.Fill(dt);
@@ -81,12 +83,19 @@ namespace GerenciamentoDeAluguelDeCarro
                     dgvClientes.Refresh();
                     txtCod.Clear();
                     MessageBox.Show("Lista Carregada!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    con.Close();
-            }
-            else
-            {
-                MessageBox.Show("Preencha o código do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Preencha o código do cliente!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
         }
 
