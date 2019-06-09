@@ -54,8 +54,8 @@ namespace GerenciamentoDeAluguelDeCarro
                 {
                     MessageBox.Show("Preencha todos os códigos", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                else if (cbSituacaoVeiculo.Text == "Alugado")
-                    MessageBox.Show("Veiculo Já se encontra alugado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbSituacaoVeiculo.Text == "Alugado" || cbSituacaoVeiculo.Text=="Indisponivel")
+                    MessageBox.Show("Veiculo Já se encontra alugado ou indisponivel", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {                    
                         comando.CommandText = "INSERT INTO locacao(cod_cliente,nome_cliente,cod_fun,nome_fun,cod_veiculo,modelo_veiculo,data_aluguel,data_devolucao,situacao,situacao_pagamento)VALUES('" + txtCodCliente.Text + "','" + txtNomeCliente.Text + "','" + txtCodigoFuncionario.Text + "','" + txtNomeFuncionario.Text + "','" + txtCodigoVeiculo.Text + "','" + txtModeloVeiculo.Text + "','" + dtpLocacao.Value.Date.ToString("dd/MM/yyyy") + "','" + dtpDevolucao.Value.Date.ToString("dd/MM/yyyy") + "','Em aberto','Não Pago')";
