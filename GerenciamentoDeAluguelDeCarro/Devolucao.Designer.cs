@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevolucao));
             this.dtpLocacao = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
             this.btnCalcularTotal = new System.Windows.Forms.Button();
@@ -79,7 +80,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.txtValoresAdicionais = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.txtCodCliente = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -92,6 +92,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSituacaoLocacao = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -592,17 +593,6 @@
             this.label29.TabIndex = 108;
             this.label29.Text = "Total a Pagar";
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
-            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(175, 61);
-            this.btnVoltar.TabIndex = 111;
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
@@ -720,11 +710,22 @@
             this.label11.TabIndex = 123;
             this.label11.Text = "Situação";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.left_arrow;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(175, 61);
+            this.btnVoltar.TabIndex = 111;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmDevolucao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 712);
+            this.ClientSize = new System.Drawing.Size(1370, 788);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtSituacaoLocacao);
             this.Controls.Add(this.groupBox2);
@@ -785,7 +786,8 @@
             this.Controls.Add(this.txtNomeCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDevolucao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Devolucao";

@@ -17,7 +17,6 @@ namespace GerenciamentoDeAluguelDeCarro
         public frmMenu(string usuario)
         {
             InitializeComponent();
-            CarregaLabel();
             lblUsuario.Text = usuario;
            
         }
@@ -120,6 +119,9 @@ namespace GerenciamentoDeAluguelDeCarro
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmLogin login = new frmLogin();
+            login.Show();
+
         }
         private void CarregaLabel()
         {

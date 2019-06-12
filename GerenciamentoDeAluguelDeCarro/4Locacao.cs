@@ -70,13 +70,17 @@ namespace GerenciamentoDeAluguelDeCarro
                         Document doc = new Document(PageSize.A4);
                         doc.SetMargins(40, 40, 40, 80);
                         doc.AddCreationDate();//adicionando as configuracoes
-                        string caminho = @"D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\Contratos\" + "CONTRATO" + txtCodCliente.Text + ".pdf";
+                        string caminho = @"D:\Users\Celso\Desktop\joao\###Prototipo Sistema GLV\SysMk\Contratos\" + "CONTRATO" + txtCodCliente.Text + txtCodigoVeiculo.Text+".pdf";
                         PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
                         doc.Open();
-                        Paragraph paragrafo = new Paragraph("    Eu, " + txtNomeCliente.Text + ", Cnh: " + txtCnhCliente.Text + ",Inscrito no CPF: ___.___.___-__ E RG______________ residente e domiciliado(a) à " + txtEnderecoCliente.Text + ", na cidade de " + txtCidadeCliente.Text + " - " + cbEstadoCliente.Text + ",por meio deste instrumento declaro me responsabilizar pela conservação de um Veiculo " + txtMarcaVeiculo.Text + "," + txtModeloVeiculo.Text + "," + txtAnoVeiculo.Text + ".\n    Me comprometo a devolver o mencionado bem em perfeito estado de conservação, como atualmente se encontra, ao fim do prazo estabelecido\n.   E me comprometo a pagar o devido valor de : " + lblTotal.Text + "\n    Em caso de extravio ou danos que provoquem a perda total ou parcial do bem, fico obrigado a ressarcir o proprietário dos prejuízos ocasionados.\n\n\n" + dtpLocacao.Text + "\n\nAssinatura:\n_____________________________________\n\n\n\nAtesto que o bem foi devolvido em " + dtpDevolucao.Text + ", Nas seguintes condições: \n\n(_)Perfeito Estado\n(_)Com Defeitos\n(_)Faltando peças /acessórios\n");
+                        Paragraph paragrafo = new Paragraph("    Eu, " + txtNomeCliente.Text + ", Cnh: " + txtCnhCliente.Text + ",Inscrito no CPF: ___.___.___-__ E RG______________ residente e domiciliado(a) à " + txtEnderecoCliente.Text + ", na cidade de " + txtCidadeCliente.Text + " - " + cbEstadoCliente.Text + ",por meio deste instrumento declaro me responsabilizar pela conservação de um Veiculo " + txtMarcaVeiculo.Text + "," + txtModeloVeiculo.Text + "," + txtAnoVeiculo.Text + ".\n    Me comprometo a devolver o mencionado bem em perfeito estado de conservação, como atualmente se encontra, ao fim do prazo estabelecido.\n   E me comprometo a pagar o devido valor de : " + lblTotal.Text + "R$. Se a devolução ultrapassar a data prevista me comprometo a pagar os valores adicionais.\n    Em caso de extravio ou danos que provoquem a perda total ou parcial do bem, fico obrigado a ressarcir o proprietário dos prejuízos ocasionados.\n\n\n" + dtpLocacao.Text + "\n\nAssinatura:\n_____________________________________\n\n\n\nAtesto que o bem será devolvido em " + dtpDevolucao.Text + ", Em Perfeito Estado\n");
                         doc.Add(paragrafo);
                         MessageBox.Show("Veiculo alugado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         doc.Close();
+                    if (MessageBox.Show("Deseja abrir o contrato ?", "Confirmação ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start("D:\\Users\\Celso\\Desktop\\joao\\###Prototipo Sistema GLV\\SysMk\\Contratos\\CONTRATO" + txtCodCliente.Text+txtCodigoVeiculo.Text+".pdf");
+                    }
                         this.Close();
                         frmPagamento frm = new frmPagamento();
                         frm.Show();

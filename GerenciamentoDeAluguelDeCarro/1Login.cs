@@ -28,6 +28,7 @@ namespace GerenciamentoDeAluguelDeCarro
                 if (controle.T)
                 {
                     MessageBox.Show("Acesso Permitido", "Entrando...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                     frmMenu frm = new frmMenu(txtUsuario.Text);
                     frm.Show();
                     txtUsuario.Clear();

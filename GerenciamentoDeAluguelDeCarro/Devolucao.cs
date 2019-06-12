@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace GerenciamentoDeAluguelDeCarro
 {
@@ -32,7 +35,7 @@ namespace GerenciamentoDeAluguelDeCarro
         {
             con.Open();
             try
-            {
+            {              
                 if (txtCodLocacao.Text != string.Empty)
                 {
                     if (txtSituacaoLocacao.Text != "Devolvido")
@@ -42,7 +45,7 @@ namespace GerenciamentoDeAluguelDeCarro
                             MessageBox.Show("Esta locação não existe!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
-                        {
+                        {                          
                             comando.CommandText = "UPDATE locacao SET situacao='Devolvido' WHERE cod_locacao='" + txtCodLocacao.Text + "'";
                             comando.ExecuteNonQuery();
                             comando.CommandText = "UPDATE veiculo SET odometro='" + txtOdometroVeiculo.Text + "',tanque='" + cbTanqueVeiculo.Text + "',estado='" + cbEstadoVeiculo.Text + "',situacao='Disponivel' WHERE cod_veiculo='"+txtCodVeiculo.Text+"'";
@@ -69,6 +72,7 @@ namespace GerenciamentoDeAluguelDeCarro
                             txtSituacaoLocacao.Clear();
                             MessageBox.Show("Veiculo Devolvido!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
+                       
                     }else
                     {
                         MessageBox.Show("Este Veiculo Ja foi devolvido!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
