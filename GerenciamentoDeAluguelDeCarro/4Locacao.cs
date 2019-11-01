@@ -321,6 +321,7 @@ namespace GerenciamentoDeAluguelDeCarro
             else
             {
                 txtNomeFuncionario.Enabled = true;
+                txtNomeFuncionario.Clear();
             }
         }
 

@@ -38,6 +38,8 @@
             // 
             // pbcarrega
             // 
+            this.pbcarrega.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pbcarrega.ForeColor = System.Drawing.Color.Lime;
             this.pbcarrega.Location = new System.Drawing.Point(12, 265);
             this.pbcarrega.Name = "pbcarrega";
             this.pbcarrega.Size = new System.Drawing.Size(576, 23);
@@ -45,6 +47,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.banner1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -57,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.Silver;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;

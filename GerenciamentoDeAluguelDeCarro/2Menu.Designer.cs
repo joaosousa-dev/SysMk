@@ -44,7 +44,6 @@
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.locaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -85,7 +84,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aToolStripMenuItem,
             this.bToolStripMenuItem,
-            this.cToolStripMenuItem,
             this.logoutToolStripMenuItem,
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -190,13 +188,6 @@
             this.locaçãoToolStripMenuItem.Text = "Locação";
             this.locaçãoToolStripMenuItem.Click += new System.EventHandler(this.locaçãoToolStripMenuItem_Click);
             // 
-            // cToolStripMenuItem
-            // 
-            this.cToolStripMenuItem.Font = new System.Drawing.Font("Square721 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.cToolStripMenuItem.Text = "Relatório";
-            // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Font = new System.Drawing.Font("Square721 BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,6 +291,7 @@
             // btnCategoriasDeVeiculos
             // 
             this.btnCategoriasDeVeiculos.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnCategoriasDeVeiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoriasDeVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoriasDeVeiculos.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.category;
             this.btnCategoriasDeVeiculos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -315,6 +307,7 @@
             // btnPagamento
             // 
             this.btnPagamento.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagamento.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.dollar_bills;
             this.btnPagamento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -330,6 +323,7 @@
             // btnFuncionarios
             // 
             this.btnFuncionarios.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFuncionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFuncionarios.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.group__2_;
             this.btnFuncionarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -345,6 +339,7 @@
             // btnDevolucao
             // 
             this.btnDevolucao.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDevolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolucao.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.return_to_the_past;
             this.btnDevolucao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -360,6 +355,7 @@
             // btnClientes
             // 
             this.btnClientes.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.users1;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -375,6 +371,7 @@
             // btnLocacao
             // 
             this.btnLocacao.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnLocacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocacao.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.rent_a_car;
             this.btnLocacao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -390,6 +387,7 @@
             // btnVeiculos
             // 
             this.btnVeiculos.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnVeiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVeiculos.Image = global::GerenciamentoDeAluguelDeCarro.Properties.Resources.sports_car__1_;
             this.btnVeiculos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -407,7 +405,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(1370, 788);
+            this.ClientSize = new System.Drawing.Size(1370, 780);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCategoriasDeVeiculos);
             this.Controls.Add(this.groupBox1);
@@ -454,7 +452,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veículosToolStripMenuItem;
